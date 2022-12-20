@@ -30,7 +30,7 @@ using namespace std;
         4.5.Code Optimization: Uses information present in the symbol table for machine-dependent optimization.
         4.6.Target Code generation: Generates code by using address information of identifier present in the table.
 
-    Symbol Table entries – Each entry in the symbol table is associated with attributes that support the compiler
+    Symbol Table entries â€“ Each entry in the symbol table is associated with attributes that support the compiler
     in different phases.
 
     Items stored in Symbol table:
@@ -50,7 +50,6 @@ using namespace std;
     6.Number and type of arguments passed to function
     7.Base Address
 */
-
 /*
     always remember that symbol table can not be changed.
 
@@ -69,5 +68,4 @@ using namespace std;
 */
 int main()
 {
-
 }
