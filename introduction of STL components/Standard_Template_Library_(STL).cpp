@@ -27,11 +27,11 @@ using namespace std;
 */
 /*
     A template is a simple yet very powerful tool in C++. The simple idea is to pass data type as a parameter
-    so that we don’t need to write the same code for different data types. For example, a software company may
+    so that we donâ€™t need to write the same code for different data types. For example, a software company may
     need to sort() for different data types. Rather than writing and maintaining multiple codes, we can write
     one sort() and pass data type as a parameter.
-    C++ adds two new keywords to support templates: ‘template’ and ‘typename’. The second keyword can always
-    be replaced by the keyword ‘class’.
+    C++ adds two new keywords to support templates: â€˜templateâ€™ and â€˜typenameâ€™. The second keyword can always
+    be replaced by the keyword â€˜classâ€™.
 */
 /*
                |->  Algorithms
@@ -106,7 +106,7 @@ using namespace std;
     need to store a list of names, we can use a vector. C++ STL provides different types of containers
     based on our requirements.
 
-    Containers or container classes store objects and data. There are in total seven standards “first-class”
+    Containers or container classes store objects and data. There are in total seven standards â€œfirst-classâ€
     container classes and three container adaptor classes and only seven header files that provide access to
     these containers or container adaptors.
 
@@ -199,7 +199,6 @@ using namespace std;
     Unordered Multimap:
            Syntax: unordered_multimap<string, int> umm1;
 */
-
 /*
     Utility Library(Extra)
     Defined in header <utility>.
