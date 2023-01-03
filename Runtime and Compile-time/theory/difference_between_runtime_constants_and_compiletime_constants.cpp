@@ -10,6 +10,7 @@ using namespace std;
                   https://www.geeksforgeeks.org/memory-layout-of-c-program/
                   https://www.baeldung.com/cs/runtime-vs-compile-time
 */
+
 int main()
 {
     /* Compile-time
@@ -31,7 +32,7 @@ int main()
     2. A compile-time constant will have the same value each time when the source code is run.
     3. It is generally used while declaring an array size.
     4. If you use const int size = 5 for defining a case expression it would run smoothly
-    and won’t produce any compile-time error.
+    and wonâ€™t produce any compile-time error.
     5. It does not produces any compile time error when used for initializing an enumerator.
 
     Runtime constants
