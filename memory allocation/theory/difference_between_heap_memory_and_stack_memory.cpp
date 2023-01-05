@@ -12,7 +12,8 @@ using namespace std;
                   https://www.geeksforgeeks.org/what-is-memory-leak-how-can-we-avoid/
 */
 /*
-    Stack	vs   Heap:
+                                                Stack	 vs    Heap
+                                                
     1.1.Stack provides static memory allocation, i.e., it is used to store the temporary variables.
     1.2.Heap provides dynamic memory allocation. By default, all the global variables are stored in the heap.
 
