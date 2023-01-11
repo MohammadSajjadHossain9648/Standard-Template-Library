@@ -7,6 +7,21 @@ using namespace std;
                   https://cplusplus.com/reference/string/string/
                   https://www.scaler.com/topics/cpp/strings-in-cpp/
 */
+/*
+    String Operations:
+    1.copy() - Copy sequence of characters from string
+    2.find() - Find content in string
+    3.rfind() - Find last occurrence of content in string
+    4.find_first_of() - Find character in string
+    5.find_last_of() - Find character in string from the end
+    6.find_first_not_of() - Find absence of character in string
+    7.find_last_not_of() - Find non-matching character in string from the end
+    8.substr() - Generate substring
+    9.compare() - It is used to replace portion of string.
+    10.data() - Get string data
+    11.c_str – Get C string equivalent
+    12.get_allocator() – Get allocator
+*/
 int main()
 {
 //copy
