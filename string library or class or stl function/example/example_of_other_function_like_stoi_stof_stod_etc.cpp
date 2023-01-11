@@ -7,6 +7,19 @@ using namespace std;
                   https://cplusplus.com/reference/string/string/
                   https://www.scaler.com/topics/cpp/strings-in-cpp/
 */
+/*
+    other function:
+    1.stod() - convert string to double
+    2.stof() - convert string to float
+    3.stoi() - convert string to int
+    4.stol() - convert string to long int
+    5.stold() - convert string to long double
+    6.stoll() - convert string to long long
+    7.stoul() - convert string to unsigned integer
+    8.stoull() - convert string to unsigned long long
+    9.to_string() - convert numerical value to string
+    10.to_wstring() - convert numerical value to wide string
+*/
 int main()
 {
     string orbits ("365.24 29.53");
