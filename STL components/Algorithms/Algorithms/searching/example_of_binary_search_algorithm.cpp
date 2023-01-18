@@ -1,7 +1,12 @@
 #include<iostream>
 #include<algorithm>
 using namespace std;
-
+/*
+    to know more: https://levelup.gitconnected.com/learning-c-sorting-algorithms-of-the-stl-3c473a1e3143
+                  https://www.softwaretestinghelp.com/algorithms-in-stl/
+                  https://www.studytonight.com/cpp/stl/stl-sorting-algorithms
+                  https://www.geeksforgeeks.org/sort-algorithms-the-c-standard-template-library-stl/
+*/
 int main()
 {
     int arr[] = { 1, 5, 8, 9, 6, 7, 3, 4, 2, 0 };
