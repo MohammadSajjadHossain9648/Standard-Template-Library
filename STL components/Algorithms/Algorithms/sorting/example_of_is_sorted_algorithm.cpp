@@ -6,6 +6,16 @@ using namespace std;
                   https://www.digitalocean.com/community/tutorials/sort-in-c-plus-plus
                   https://www.studytonight.com/cpp/stl/stl-sorting-algorithms
 */
+/*
+    is_sorted method:
+    This function of the STL, returns true if the given range is sorted.
+
+    There are two version of is_sorted() :
+    1.is_sorted(start_iterator, end_iterator) : Checks the range defined by iterators start_iterator and
+    end_iterator in ascending order.
+    2.is_sorted(start_iterator, end_iterator, compare_function) : It also checks the given range but you can
+    define how the sorting must be done.
+*/
 int main()
 {
     int a[] = {9,8,7,6,5,4,3,2,1};
