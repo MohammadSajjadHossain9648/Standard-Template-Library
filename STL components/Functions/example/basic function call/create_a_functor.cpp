@@ -8,9 +8,6 @@ using namespace std;
                   https://www.quantstart.com/articles/Function-Objects-Functors-in-C-Part-1/
                   https://learn.microsoft.com/en-us/cpp/standard-library/function-objects-in-the-stl?view=msvc-170
 */
-
-
-
 class Welcome
 {
 public:
