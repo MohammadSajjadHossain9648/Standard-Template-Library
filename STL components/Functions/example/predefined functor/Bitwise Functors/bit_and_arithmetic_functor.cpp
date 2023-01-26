@@ -20,11 +20,21 @@ int main()
     cout<<ba2(x+1, y+2)<<endl;
     cout<<ba3(x, y)<<endl; // same as bit_and<void> ()(x, y)
 
+    cout<<bit_and<int>()(15,10)<<endl; // Explicit type as the template argument
+    cout<<bit_and<void>()(3, 4)<<endl; // template specialization used, type is auto deduced from the arguments
+    cout<<bit_and<>()(0x11, 0x23)<<endl;
+    cout<<bit_and<>()(0x13, 0x23)<<endl;
+    cout<<bit_and<>()('h','a')<<endl;
 
     //output:
     //    0
     //    5
     //    0
+    //    10
+    //    0
+    //    1
+    //    3
+    //    96
 }
 
 
