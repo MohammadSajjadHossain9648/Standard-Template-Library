@@ -40,6 +40,15 @@ int main()
     Money m{ 5,40 };
     m=divides<>()(m, 4);
     cout<<m.Doller <<" Doller "<<m.Cent<<" Cent"<<endl; // Default template argument is void
+    
+
+    //output:
+    //    2
+    //    1
+    //    2
+    //    1
+    //    5
+    //    1 Doller 35 Cent
 }
 
 
