@@ -36,9 +36,25 @@ int main()
         cout<<"x = "<<x<<" is not greater than "<<"y = "<<y<<endl;
     }
 
+    
+//another example
+    Money m1{ 5, 40 };
+    Money m2{ 4, 50 };
+    greater<> g;
+    //greater<void> g; //Same as above
+    //greater<Money> g // Same as above
+    if(g(m1,m2))
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is greater than "<< m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
+    else
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is not greater than "<<m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
 
     //output:
     //    x = 20 is greater than y = 10
+    //    5 Dollar 40 Cent is greater than 4 Dollar 50 Cent
 }
 
 
