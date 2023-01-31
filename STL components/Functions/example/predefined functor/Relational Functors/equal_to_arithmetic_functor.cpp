@@ -34,8 +34,25 @@ int main()
         cout<<"x = "<<x<<" is not equal to "<<"y = "<<y<<endl;
     }
 
+    
+//another example
+    Money m1{ 5, 40 };
+    Money m2{ 5, 30 };
+    equal_to<> e;
+    //equal_to<void> e; //Same as above
+    //equal_to<Money> e // Same as above
+    if(e(m1,m2))
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is equal to "<< m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
+    else
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is not equal to "<<m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
 
+    
     //output:
     //    x = 20 is not equal to y = 10
+    //    5 Dollar 40 Cent is not equal to 5 Dollar 30 Cent
 }
 
