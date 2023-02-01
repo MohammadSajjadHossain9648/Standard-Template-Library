@@ -37,8 +37,25 @@ int main()
     }
 
 
+    //another example
+    Money m1{ 5, 40 };
+    Money m2{ 4, 50 };
+    less_equal<> g;
+    //less_equal<void> g; //Same as above
+    //less_equal<Money> g // Same as above
+    if(g(m1,m2))
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is less equal than "<< m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
+    else
+    {
+        cout<<m1.Dollar<<" Dollar "<<m1.Cent<<" Cent is not less equal than "<<m2.Dollar<<" Dollar "<<m2.Cent<<" Cent"<<endl;
+    }
+
+
     //output:
     //    x = 20 is not less equal than y = 10
+    //    5 Dollar 40 Cent is less equal than 4 Dollar 50 Cent
 }
 
 
