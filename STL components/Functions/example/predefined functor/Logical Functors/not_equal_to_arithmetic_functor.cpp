@@ -34,7 +34,7 @@ int main()
     }
 
 
-    //another example
+//another example
     Money m1{ 5,40 };
     Money m2{ 5, 40 };
     not_equal_to<> ne;
