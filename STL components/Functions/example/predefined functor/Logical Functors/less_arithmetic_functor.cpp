@@ -37,7 +37,7 @@ int main()
     }
 
 
-    //another example
+//another example
     Money m1{ 5, 40 };
     Money m2{ 4, 50 };
     less<> g;
