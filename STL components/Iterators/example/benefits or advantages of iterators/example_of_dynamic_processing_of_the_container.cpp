@@ -10,6 +10,11 @@ using namespace std;
                   https://www.studytonight.com/cpp/stl/
                   https://www.softwaretestinghelp.com/iterators-in-stl/
 */
+/*
+    Dynamic processing of the container:
+    Iterators provide us the ability to dynamically add or remove elements from the container as
+    and when we want with ease.
+*/
 int main()
 {
     // Declaring a vector
