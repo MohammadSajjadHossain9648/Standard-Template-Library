@@ -10,6 +10,13 @@ using namespace std;
                   https://www.studytonight.com/cpp/stl/
                   https://www.softwaretestinghelp.com/iterators-in-stl/
 */
+/*
+    Convenience in programming:
+    It is better to use iterators to iterate through the contents of containers as if we will not use
+    an iterator and access elements using [ ] operator, then we need to be always worried about the size
+    of the container, whereas with iterators we can simply use member function end() and iterate through
+    the contents without having to keep anything in mind.
+*/
 int main()
 {
     // Declaring a vector
