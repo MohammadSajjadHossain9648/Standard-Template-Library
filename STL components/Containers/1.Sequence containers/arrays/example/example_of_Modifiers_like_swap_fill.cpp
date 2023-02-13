@@ -7,6 +7,11 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-array
 */
+/*
+    Modifiers:
+    1.swap() – It is used to swap the contents of one array with another array of same type. Sizes may differ.
+    2.fill() - This function is used to fill the entire array with a particular value.
+*/
 int main()
 {
     // Assign array
