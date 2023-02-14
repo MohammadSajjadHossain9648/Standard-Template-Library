@@ -8,7 +8,16 @@ using namespace std;
                   https://www.studytonight.com/cpp/stl/stl-container-deque
                   https://www.geeksforgeeks.org/deque-cpp-stl/
 */
-
+/*
+    Capacity:
+    1.size() – Returns the number of elements in the deque.
+    2.max_size() – Returns the maximum number of elements that the deque can hold.
+    3.resize(n) – Resizes the container so that it contains ‘n’ elements.
+    4.empty() – Returns whether the container is empty.
+    5.shrink_to_fit() – Reduces the capacity of the container to fit its size and destroys all elements beyond
+    the capacity.
+    6.reserve() – Requests that the deque capacity be at least enough to contain n elements.
+*/
 int main()
 {
     deque <int> v = {10,20,30,40,50};
