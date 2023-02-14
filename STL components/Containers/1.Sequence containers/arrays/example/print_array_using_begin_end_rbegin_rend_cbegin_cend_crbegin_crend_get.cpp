@@ -60,7 +60,8 @@ int main()
     for (auto ir = v.crbegin(); ir != v.crend(); ++ir)
         cout<<*ir<<" ";
 
-    return 0;
+    
+    
 
     //output:
     //    array <int, 5> v = 10 20 30 40 50
