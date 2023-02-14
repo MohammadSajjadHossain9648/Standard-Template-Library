@@ -37,8 +37,8 @@ int main()
     // pointer to the first element
     int* pos = v.data();
     cout<<"\nThe first element is "<<*pos;
-    return 0;
 
+    
     //output:
     //    array <int> v = 10 20 30 40 50
     //    Reference operator [index_no] : v[2] = 30
