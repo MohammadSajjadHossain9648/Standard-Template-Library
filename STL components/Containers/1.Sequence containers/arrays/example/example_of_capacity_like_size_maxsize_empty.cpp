@@ -35,7 +35,6 @@ int main()
         cout<<"\narray is empty";
 
 
-    return 0;
 
     //output:
     //    array <int> v = 10 20 30 40 50
