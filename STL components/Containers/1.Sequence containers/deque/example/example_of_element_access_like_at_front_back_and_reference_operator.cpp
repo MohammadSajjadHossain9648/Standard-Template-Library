@@ -8,6 +8,13 @@ using namespace std;
                   https://www.studytonight.com/cpp/stl/stl-container-deque
                   https://www.geeksforgeeks.org/deque-cpp-stl/
 */
+/*
+    Element access:
+    1.reference operator [index_no] – Returns a reference to the element at position ‘index_no’ in the deque
+    2.at(index_no) – Returns a reference to the element at position ‘index_no’ in the deque
+    3.front() – Returns a reference to the first element in the deque
+    4.back() – Returns a reference to the last element in the deque
+*/
 int main()
 {
     deque <int> v = {10,20,30,40,50};
