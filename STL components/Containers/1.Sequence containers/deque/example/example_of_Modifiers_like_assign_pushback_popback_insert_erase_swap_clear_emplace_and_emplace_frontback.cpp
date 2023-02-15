@@ -9,6 +9,31 @@ using namespace std;
                   https://www.geeksforgeeks.org/deque-cpp-stl/
                   https://iq.opengenus.org/initialize-deque-in-cpp-stl/
 */
+/*
+    Modifiers:
+    1.assign() – It assigns new value to the deque elements by replacing old ones
+    & fill() -  fill constructor will give us the ability to construct and initialize a deque with n number
+    of elements and assign a value to each element.
+    2.push_back() – It push the elements into a deque from the back
+    3.pop_back() – It is used to pop or remove elements from a deque from the back.
+    4.insert() – It inserts new elements before the element at the specified position
+    5.erase() – It is used to remove elements from a container from the specified position or range.
+    6.swap() – It is used to swap the contents of one deque with another deque of same type. Sizes may differ.
+    7.clear() – It is used to remove all the elements of the deque container
+    8.emplace() – It extends the container by inserting new element at position
+    9.emplace_front() – It is used to insert a new element into the list container, the new element is added
+    to the begining of the list
+    10.emplace_back() – It is used to insert a new element into the deque container, the new element is added
+    to the end of the deque
+    11.move() - move constructor will give us the ability to construct a new deque and initialize with elements
+    from another deque. This initialization technique gives us a linear time complexity of 0(n).
+    12.copy() - copy constructor will give us the ability to construct a new deque and initialize it with a copy
+    of elements present in another existing deque. This initialization technique gives us a linear time complexity
+    of 0(n).
+    13.range() - range constructor will give us the ability to construct a deque and initialize it with elements
+    that are in a range between first to last using {}. This initialization technique gives us a linear time
+    complexity of 0(n).
+*/
 int main()
 {
     // Assign deque
