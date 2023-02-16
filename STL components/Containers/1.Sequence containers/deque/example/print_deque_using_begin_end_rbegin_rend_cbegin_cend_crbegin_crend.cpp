@@ -8,6 +8,21 @@ using namespace std;
                   https://www.studytonight.com/cpp/stl/stl-container-deque
                   https://www.geeksforgeeks.org/deque-cpp-stl/
 */
+/*
+    1.begin() – Returns an iterator pointing to the first element in the deque
+    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the deque
+    3.rbegin() – Returns a reverse iterator pointing to the last element in the deque (reverse beginning).
+    It moves from last to first element
+    4.rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in
+    the deque (considered as reverse end)
+    5.cbegin() – Returns a constant iterator pointing to the first element in the deque.
+    6.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    in the deque.
+    7.crbegin() – Returns a constant reverse iterator pointing to the last element in the deque (reverse beginning).
+    It moves from last to first element
+    8.crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element
+    in the deque (considered as reverse end)
+*/
 int main()
 {
     deque <int> v = {10,20,30,40,50};
