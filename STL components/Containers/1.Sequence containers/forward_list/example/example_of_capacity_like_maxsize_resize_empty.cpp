@@ -7,6 +7,12 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-forward_list
 */
+/*
+    Capacity:
+    1.max_size() – Returns the maximum number of elements that the forward_list can hold.
+    2.resize(n) – Resizes the container so that it contains ‘n’ elements.
+    3.empty() – Returns whether the container is empty.
+*/
 int main()
 {
     forward_list <int> v = {10,20,30,40,50};
