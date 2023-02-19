@@ -7,6 +7,34 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-forward_list
 */
+/*
+    Modifiers:
+    1.assign() – It assigns new value to the forward_list elements by replacing old ones
+    & fill() -  fill constructor will give us the ability to construct and initialize a forward_list with n number
+    of elements and assign a value to each element.
+    2.push_front() - This function is used to insert the element at the first position on forward_list. The value
+    from this function is copied to the space before first element in the container. The size of forward_list
+    increases by 1.
+    3.emplace_front() - This function is similar to the previous function but in this no copying operation occurs,
+    the element is created directly at the memory before the first element of the forward_list.
+    4.pop_front() - This function is used to delete the first element of the list.
+    5.insert_after() - This function gives us a choice to insert elements at any position in forward_list. The
+    arguments in this function are copied at the desired position.
+    6.emplace_after() - This function also does the same operation as the above function but the elements are
+    directly made without any copy operation.
+    7.erase_after() - This function is used to erase elements from a particular position in the forward_list. There
+    are two variants of ‘erase after’ function.
+    8.before_begin() - Returns an iterator that points to the position before the first element of the forward_list.
+    9.cbefore_begin() - Returns a constant random access iterator which points to the position before the first element
+    of the forward_list.
+    10.reverse() - It is used to swap the contents of one list
+    11.unique() - It remove all duplicates in the list
+    12.clear() – It is used to remove all the elements of the forward_list container
+    13.remove() - Removes all the elements from the list, which are equal to given element.
+    14.remove_if() - Used to remove all the values from the list that correspond true to the predicate or condition
+    given as parameter to the function.
+    15.splice_after() - This function transfers elements from one forward_list to other.
+*/
 int main()
 {
     // Assign forward_list
