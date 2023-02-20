@@ -7,6 +7,13 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-forward_list
 */
+/*
+    1.begin() – Returns an iterator pointing to the first element in the forward_list
+    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the forward_list
+    3.cbegin() – Returns a constant iterator pointing to the first element in the forward_list.
+    4.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    in the forward_list.
+*/
 int main()
 {
     forward_list <int> v = {10,20,30,40,50};
