@@ -10,6 +10,23 @@ using namespace std;
                   https://www.geeksforgeeks.org/iterators-c-stl/
                   https://www.geeksforgeeks.org/std-find-in-cpp/
 */
+/*
+    Element access:
+    1.reference operator [index_no] – Returns a reference to the element at position ‘index_no’ in the vector
+    2.at(index_no) – Returns a reference to the element at position ‘index_no’ in the vector
+    3.front() – Returns a reference to the first element in the vector
+    4.back() – Returns a reference to the last element in the vector
+    5.data() – Returns a direct pointer to the memory array used internally by the vector to store its owned elements.
+    6.advance() - This function is used to increment the iterator position till the specified number mentioned in
+    its arguments.
+    7.next() - This function returns the new iterator that the iterator would point after advancing the positions
+    mentioned in its arguments.
+    8.prev() - This function returns the new iterator that the iterator would point after decrementing the positions
+    mentioned in its arguments.
+    9.inserter() - This function is used to insert the elements at any position in the container. It accepts 2
+    arguments, the container and iterator to position where the elements have to be inserted.
+    10.find() - Find content in vector use header #include<bits/stdc++.h>
+*/
 int main()
 {
     vector <int> v = {10,20,30,40,50};
