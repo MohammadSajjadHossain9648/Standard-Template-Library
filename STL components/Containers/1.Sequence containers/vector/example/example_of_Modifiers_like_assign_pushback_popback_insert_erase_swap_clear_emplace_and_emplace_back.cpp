@@ -7,6 +7,21 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-vector
 */
+/*
+    Modifiers:
+    1.assign() – It assigns new value to the vector elements by replacing old ones
+    & fill() -  fill constructor will give us the ability to construct and initialize a vector with n number
+    of elements and assign a value to each element.
+    2.push_back() – It push the elements into a vector from the back
+    3.pop_back() – It is used to pop or remove elements from a vector from the back.
+    4.insert() – It inserts new elements before the element at the specified position
+    5.erase() – It is used to remove elements from a container from the specified position or range.
+    6.swap() – It is used to swap the contents of one vector with another vector of same type. Sizes may differ.
+    7.clear() – It is used to remove all the elements of the vector container
+    8.emplace() – It extends the container by inserting new element at position
+    9.emplace_back() – It is used to insert a new element into the vector container, the new element is added
+    to the end of the vector
+*/
 int main()
 {
     // Assign vector
