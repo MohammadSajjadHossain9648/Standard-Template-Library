@@ -7,6 +7,12 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-stack
 */
+/*
+    Element access:
+    1.top() – Returns a reference to the top most element(last input element) of the stack
+    2.value_type – Represents the type of object stored as an element in a stack. It acts as a synonym
+    for the template parameter.
+*/
 int main()
 {
     stack <int> v;
