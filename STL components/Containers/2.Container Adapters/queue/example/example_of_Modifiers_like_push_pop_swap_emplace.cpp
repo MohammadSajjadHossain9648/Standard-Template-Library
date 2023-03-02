@@ -7,6 +7,13 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-queue
 */
+/*
+    Modifiers:
+    1.push() – Adds the element at the end of the queue.
+    2.pop() – Deletes the first element of the queue.
+    3.swap() – It is used to swap the contents of one queue with another queue of same type. Sizes may differ.
+    4.emplace() – Insert a new element into the queue container, the new element is added to the end of the queue.
+*/
 int main()
 {
     // Assign queue
