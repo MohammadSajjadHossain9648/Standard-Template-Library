@@ -7,6 +7,11 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-priority_queue
 */
+/*
+    Capacity:
+    1.size() – Returns the number of elements in the priority_queue.
+    2.empty() – Returns whether the priority_queue is empty.
+*/
 int main()
 {
     priority_queue <int> v;
