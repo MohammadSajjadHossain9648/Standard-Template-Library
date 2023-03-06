@@ -105,4 +105,19 @@ int main()
         v2.pop();
     }
     cout<<endl;
+    
+
+    //output:
+    //    v.push(15), The first element is: 50
+    //    v.pop(), The first element is: 40
+    //    priority_queue<int> v = 40 30 20 15 10
+    //
+    //    priority_queue<int> v3 = 10 9 8 7 6
+    //    priority_queue<int> v4 = 10 9 8 7 6
+    //    before Swap
+    //    priority_queue 1: v1 = {1,2}
+    //    priority_queue 2: v2 = {3,4}
+    //    After Swap
+    //    priority_queue 1: v1 = 4 3
+    //    priority_queue 2: v2 = 2 1
 }
