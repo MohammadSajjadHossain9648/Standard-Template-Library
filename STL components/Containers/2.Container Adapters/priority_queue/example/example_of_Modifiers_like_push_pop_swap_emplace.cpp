@@ -7,6 +7,15 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-priority_queue
 */
+/*
+    Modifiers:
+    1.push() – Adds the element at the end of the priority_queue by decreasing order.
+    2.pop() – Deletes the topmost/first element(greatest element) of the priority_queue.
+    3.swap() – It is used to swap the contents of one priority_queue with another priority_queue of same type.
+    Sizes may differ.
+    4.emplace() – Insert a new element into the priority_queue container, the new element is added to the end
+    of the priority_queue.
+*/
 int main()
 {
     priority_queue<int> v;
