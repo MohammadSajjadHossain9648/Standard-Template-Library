@@ -11,6 +11,21 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-map
 */
+/*
+    1.begin() – Returns an iterator pointing to the first element in the map
+    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the map
+    3.rbegin() – Returns a reverse iterator pointing to the last element in the map (reverse beginning).
+    It moves from last to first element
+    4.rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in
+    the map (considered as reverse end)
+    5.cbegin() – Returns a constant iterator pointing to the first element in the map.
+    6.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    in the map.
+    7.crbegin() – Returns a constant reverse iterator pointing to the last element in the map (reverse beginning).
+    It moves from last to first element
+    8.crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element
+    in the map (considered as reverse end)
+*/
 int main()
 {
     map <int, string> v = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
