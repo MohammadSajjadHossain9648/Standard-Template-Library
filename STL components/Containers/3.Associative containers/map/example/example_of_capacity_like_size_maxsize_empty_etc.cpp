@@ -1,0 +1,262 @@
+#include<iostream>
+#include<map>
+#include<algorithm>
+using namespace std;
+/*
+    to know more: https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+                  https://www.studytonight.com/cpp/stl/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.mygreatlearning.com/blog/map-in-cpp/
+                  https://www.javatpoint.com/cpp-map
+                  https://www.scaler.com/topics/cpp/map-in-cpp/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.studytonight.com/cpp/stl/stl-container-map
+*/
+int main()
+{
+    map <int, string> v = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+
+    cout<<"\nmap<int, string> v\nid\tname\n";
+    for(auto i: v)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+    cout<<"Size : "<<v.size();
+    cout<<"\nMax Size : "<<v.max_size();
+
+
+//3.empty
+    // checks if the map is empty or not
+    if (v.empty() == false)
+        cout<<"\nmap is not empty";
+    else
+        cout<<"\nmap is empty";
+
+
+//4.find
+    //example 1: find the id of 1 is present or not, find() only take unique value like id, never take name.
+    cout<<"\nfind id 3: ";
+    if(v.find(3) != v.end()) //can be write, if(v.find(3) == 1) or if(v.find(3) > 0)
+    {
+        cout<<"searching id 3 found in the map.";
+    }
+    else
+    {
+        cout<<"searching id 3 didnot found in the map.";
+    }
+
+    //or print with the details of id
+    auto pos = v.find(1); //if found the id, pos store the name and id. else pos = v.end() which is null means nothing found.
+
+    if(pos != v.end())
+    {
+        cout<<"\nid 1 found and the searching value id is "<<pos->first<<" and name is "<<pos->second;
+    }
+    else
+    {
+        cout<<"\nsearching value didnot found in the map.";
+    }
+
+
+
+    //example 2: find the id 5 and delete it from map
+    v.erase(v.find(5));
+
+    /* can be write above line
+        auto pos = v.find(5);
+        v.erase(pos);
+    */
+
+    cout<<"\n\nafter delete id 5 from map:";
+    cout<<"\nmap<int, string> v\nid\tname\n";
+    for(auto i: v)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+    //example 3: print all values after id 2.
+    auto pos1 = v.find(2);
+    cout<<"\nprint all values after id 2: ";
+    cout<<"\nmap<int, string> v\nid\tname\n";
+    for(auto i=pos1; i!=v.end(); i++)
+    {
+        cout<<i->first<<"\t"<<i->second<<endl;
+    }
+    cout<<endl;
+
+
+
+//5.count -> same as find
+    //example 1: find the id 3 is present or not by counting,
+    //if value present, count = 1(true). otherwise count = 0(false) means not present
+    cout<<"\ncount id 3: ";
+    if(v.count(3)) //can be write, if(v.count(3) == 1) or if(v.count(3) > 0)
+    {
+        cout<<"searching id 3 found in the map.";
+    }
+    else
+    {
+        cout<<"searching id 3 didnot found in the map.";
+    }
+    cout<<endl;
+
+
+    //example 2: check all id's 1...10 is present or not by counting, if count = 1, value present. of count = 0, not present
+    map<int, string> v1 = {{2,"sakib"},{4,"asif"},{6,"liton"},{8,"tamim"},{10,"afif"}};
+
+    for(int i=1; i<=10; i++)
+    {
+        if(v1.count(i)) //can be write, if(v.count(30) == 1) or if(v.count(30) > 0)
+        {
+            cout<<"\nsearching id "<<i<<" found by count";
+        }
+        else
+        {
+            cout<<"\nsearching id "<<i<<" didnot found in the map.";
+        }
+    }
+    cout<<endl;
+
+
+
+//6.lower_bound and upper_bound (link:github\algorithm\Standard Template Library (STL)\STL components\Algorithms\Algorithms\Important STL Algorithms\example\Non-Manipulating Algorithms\example_of_lower_bound_and_upper_bound_algorithm.cpp)
+    map<int, string> v2 = {{2,"sakib"},{4,"asif"},{6,"liton"},{8,"tamim"},{10,"afif"}};
+
+    cout<<"\nmap<int, string> v2\nid\tname\n";
+    for(auto i: v2)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+    auto it1 = v2.lower_bound(3);
+    auto it2 = v2.upper_bound(5);
+
+    cout<<"\nthe lower bound value of 3 from v2: id = "<<it1->first<<" and name = "<<it1->second;
+    cout<<"\nthe upper bound value of 5 from v2: id = "<<it2->first<<" and name = "<<it2->second;
+
+
+    //example: delete the given range like 4 ... 6
+    map<int, string>:: iterator itlow, ithigh;
+    auto it3 = v2.lower_bound(4); //same as auto it3 = v2.lower_bound(3);
+    auto it4 = v2.upper_bound(6); //same as auto it4 = v2.lower_bound(4/5);
+
+    v2.erase(it3, it4); //give range here
+
+    /* same as v2.erase(it3, it4)
+    for(auto i=*it3; i!= *it4; i++)
+    {
+        v2.erase(i);
+    }
+    */
+
+    cout<<"\nafter delete id 4 to 6 from v2:";
+    cout<<"\nmap<int, string> v2\nid\tname\n";
+    for(auto i: v2)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+
+
+//8.equal_range which gives the result of both the lower_bound and the upper_bound of any value.
+    map<int, string> v3 = {{2,"sakib"},{4,"asif"},{6,"liton"},{8,"tamim"},{10,"afif"}};
+
+    cout<<"\nmap<int, string> v3\nid\tname\n";
+    for(auto i: v3)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+    auto it5 = v3.equal_range(4);
+
+    //here, it5.first indicates lower bound and it5.second indicates upper bound
+    cout<<"\nthe lower bound value of 4: id = "<<it5.first->first <<" and name = "<<it5.first->second;
+    cout<<"\nthe upper bound value of 4: id = "<<it5.second->first <<" and name = "<<it5.second->second;
+
+
+    return 0;
+
+    //output:
+    //    map<int, string> v
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //    Size : 5
+    //    Max Size : 128102389400760775
+    //    map is not empty
+    //    find id 3: searching id 3 found in the map.
+    //    id 1 found and the searching value id is 1 and name is asif
+    //
+    //    after delete id 5 from map:
+    //    map<int, string> v
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //
+    //
+    //    print all values after id 2:
+    //    map<int, string> v
+    //    id      name
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //
+    //
+    //    count id 3: searching id 3 found in the map.
+    //
+    //    searching id 1 didnot found in the map.
+    //    searching id 2 found by count
+    //    searching id 3 didnot found in the map.
+    //    searching id 4 found by count
+    //    searching id 5 didnot found in the map.
+    //    searching id 6 found by count
+    //    searching id 7 didnot found in the map.
+    //    searching id 8 found by count
+    //    searching id 9 didnot found in the map.
+    //    searching id 10 found by count
+    //
+    //    map<int, string> v2
+    //    id      name
+    //    2       sakib
+    //    4       asif
+    //    6       liton
+    //    8       tamim
+    //    10      afif
+    //
+    //
+    //    the lower bound value of 3 from v2: id = 4 and name = asif
+    //    the upper bound value of 5 from v2: id = 6 and name = liton
+    //    after delete id 4 to 6 from v2:
+    //    map<int, string> v2
+    //    id      name
+    //    2       sakib
+    //    8       tamim
+    //    10      afif
+    //
+    //
+    //    map<int, string> v3
+    //    id      name
+    //    2       sakib
+    //    4       asif
+    //    6       liton
+    //    8       tamim
+    //    10      afif
+    //
+    //
+    //    the lower bound value of 4: id = 4 and name = asif
+    //    the upper bound value of 4: id = 6 and name = liton
+}
