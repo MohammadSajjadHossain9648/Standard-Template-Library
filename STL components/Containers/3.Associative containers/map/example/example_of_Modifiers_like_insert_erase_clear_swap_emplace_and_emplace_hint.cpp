@@ -11,6 +11,24 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-map
 */
+/*
+    Modifiers:
+    1.insert() - Insert element in the map.
+    2.insert(iterator position, const g) - Adds a new element ‘g’ at the position pointed by the iterator.
+    3.insert_or_assign() - it works exactly as insert() except that if the given key is already present in the
+    map then its value is modified.
+    4. at() - return the reference to the element associated with the key k.
+    5.erase(const g) - Removes the value ‘g’ from the map.
+    6.erase(iterator position) - Removes the element at the position pointed by the iterator.
+    7.clear() - Removes all the elements from the map.
+    8.emplace() - This function is used to insert a new element into the map container, only if the element
+    to be inserted is unique and does not already exist in the map.
+    9.emplace_hint() - Returns an iterator pointing to the position where the insertion is done. If the element
+    passed in the parameter already exists, then it returns an iterator pointing to the position where the existing
+    element is.
+    10.swap() - This function is used to exchange the contents of two maps but the maps must be of the same type,
+    although sizes may differ.
+*/
 int main()
 {
     map <int, string> v = {{2,"sakib"},{1,"asif"},{3,"tamim"}};
