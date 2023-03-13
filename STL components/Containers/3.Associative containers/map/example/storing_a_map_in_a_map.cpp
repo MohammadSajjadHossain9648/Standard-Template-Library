@@ -51,4 +51,11 @@ int main()
     {
         cout << it.second << " ";
     }
+    
+
+
+    //output:
+    //    2
+    //    6
+    //    1 2 3 4
 }
