@@ -1,7 +1,11 @@
 #include<iostream>
 #include<map>
 using namespace std;
-
+/*
+    **Always remember: multimaps are the associative containers that store sorted key-value pair, in which
+    each key is unique and it can be inserted or deleted but cannot be altered. Values associated with keys
+    can be changed.
+*/
 int main()
 {
 //for taking user input in multimap
