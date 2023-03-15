@@ -12,6 +12,14 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-multimap
 */
+/*
+    Element access/Observers:
+    (Returns the object that determines how the elements in the multimap are ordered (‘<‘ by default).)
+    1.key_comp() - Return a copy of key comparison object.
+    2.value_comp() - Return a copy of value comparison object.
+
+    **always remember that key_comp and value_comp both are same in use.
+*/
 int main()
 {
 // example: check that is multimap in sorted order? by using value_comp
