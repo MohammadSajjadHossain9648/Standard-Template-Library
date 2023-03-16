@@ -11,6 +11,12 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-multimap
 */
+/*
+    Allocator:
+    1.get_allocator() - C++ multimap get_allocator() function is used to return the copy of allocator object which
+    helps to construct the multimap container.
+    Time Complexity: O(1).
+*/
 int main()
 {
 //Example 1: The program below shows how allocator of a multimap can be used to allocate an array of 5 elements.
