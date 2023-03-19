@@ -28,41 +28,49 @@ using namespace std;
     is inserted in the set, they become constants and cannot be modified(the value can't be changed). Internally
     the set STL in C++ is implemented by the binary search tree(Red-Black Tree).
 
+    Note and always remember:
+    1.Set stores elements in a sorted order.
+    2.set doesnot take same value twice or more thats mean Set stores/acquire unique elements only.
+    3.set<datatype, greater<datatype>> setname; is used for storing values in a set in descending order.
+    4.Once the element is inserted in the set, they become constants and cannot be modified(the value
+    can't be changed).
+    5.Set uses Binary Search Trees for implementation
+    6. Internally the set STL in C++ is implemented by the binary search tree(Red-Black Tree).
 
 
     Iterators:
-    1.begin() – Returns an iterator pointing to the first element in the set
-    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the set
-    3.rbegin() – Returns a reverse iterator pointing to the last element in the set (reverse beginning).
+    1.begin() â€“ Returns an iterator pointing to the first element in the set
+    2.end() â€“ Returns an iterator pointing to the theoretical element that follows the last element in the set
+    3.rbegin() â€“ Returns a reverse iterator pointing to the last element in the set (reverse beginning).
     It moves from last to first element
-    4.rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in
+    4.rend() â€“ Returns a reverse iterator pointing to the theoretical element preceding the first element in
     the set (considered as reverse end)
-    5.cbegin() – Returns a constant iterator pointing to the first element in the set.
-    6.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    5.cbegin() â€“ Returns a constant iterator pointing to the first element in the set.
+    6.cend() â€“ Returns a constant iterator pointing to the theoretical element that follows the last element
     in the set.
-    7.crbegin() – Returns a constant reverse iterator pointing to the last element in the set (reverse beginning).
+    7.crbegin() â€“ Returns a constant reverse iterator pointing to the last element in the set (reverse beginning).
     It moves from last to first element
-    8.crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element
+    8.crend() â€“ Returns a constant reverse iterator pointing to the theoretical element preceding the first element
     in the set (considered as reverse end)
 
 
 
     Capacity:
-    1.size() – Returns the number of elements in the set.
-    2.max_size() – Returns the maximum number of elements that the set can hold.
-    3.empty() – Returns whether the set is empty.
-    4.find() - Returns an iterator to the element ‘g’ in the set if found, else returns the iterator to end.
-    5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the set or not.
-    6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to ‘g’ or definitely
-    will not go before the element ‘g’ in the set.
-    7.upper_bound(const g) - Returns an iterator to the first element that will go after the element ‘g’ in the set.
+    1.size() â€“ Returns the number of elements in the set.
+    2.max_size() â€“ Returns the maximum number of elements that the set can hold.
+    3.empty() â€“ Returns whether the set is empty.
+    4.find() - Returns an iterator to the element â€˜gâ€™ in the set if found, else returns the iterator to end.
+    5.count() - Returns 1 or 0 based on whether the element â€˜gâ€™ is present in the set or not.
+    6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to â€˜gâ€™ or definitely
+    will not go before the element â€˜gâ€™ in the set.
+    7.upper_bound(const g) - Returns an iterator to the first element that will go after the element â€˜gâ€™ in the set.
     8.equal_range(const g) - The function returns an iterator of pairs. (key_comp). The pair refers to the range
     that includes all the elements in the container which have a key equivalent to k. which indiactes results of both
     the lower_bound and the upper_bound of g.
 
 
     Element access/Observers:
-    (Returns the object that determines how the elements in the set are ordered (‘<‘ by default).)
+    (Returns the object that determines how the elements in the set are ordered (â€˜<â€˜ by default).)
     1.key_comp() - Return a copy of key comparison object.
     2.value_comp() - Return a copy of value comparison object.
 
@@ -70,8 +78,8 @@ using namespace std;
 
     Modifiers:
     1.insert() - Insert element in the set.
-    2.insert(iterator position, const g) - Adds a new element ‘g’ at the position pointed by the iterator.
-    3.erase(const g) - Removes the value ‘g’ from the set.
+    2.insert(iterator position, const g) - Adds a new element â€˜gâ€™ at the position pointed by the iterator.
+    3.erase(const g) - Removes the value â€˜gâ€™ from the set.
     4.erase(iterator position) - Removes the element at the position pointed by the iterator.
     5.clear() - Removes all the elements from the set.
     6.emplace() - This function is used to insert a new element into the set container, only if the element
