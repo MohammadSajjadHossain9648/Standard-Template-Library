@@ -1,7 +1,9 @@
 #include<iostream>
 #include<set>
 using namespace std;
-
+/*
+    always remember: whatever you input in set, it always stay in ascending order and always unique.
+*/
 int main()
 {
 
