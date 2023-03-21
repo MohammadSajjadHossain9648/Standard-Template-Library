@@ -12,6 +12,20 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-set
 */
+/*
+    Capacity:
+    1.size() – Returns the number of elements in the set.
+    2.max_size() – Returns the maximum number of elements that the set can hold.
+    3.empty() – Returns whether the set is empty.
+    4.find() - Returns an iterator to the element ‘g’ in the set if found, else returns the iterator to end.
+    5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the set or not.
+    6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to ‘g’ or definitely
+    will not go before the element ‘g’ in the set.
+    7.upper_bound(const g) - Returns an iterator to the first element that will go after the element ‘g’ in the set.
+    8.equal_range(const g) - The function returns an iterator of pairs. (key_comp). The pair refers to the range
+    that includes all the elements in the container which have a key equivalent to k. which indiactes results of both
+    the lower_bound and the upper_bound of g.
+*/
 int main()
 {
     set <int> v = {10,20,30,40,50,5};
