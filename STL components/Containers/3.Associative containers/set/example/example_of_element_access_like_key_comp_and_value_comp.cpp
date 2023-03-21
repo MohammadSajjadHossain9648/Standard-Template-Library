@@ -11,6 +11,21 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-set
 */
+/*
+    Element access/Observers:
+    (Returns the object that determines how the elements in the set are ordered (‘<‘ by default).)
+    1.key_comp() - Return a copy of key comparison object.
+    2.value_comp() - Return a copy of value comparison object.
+
+    **always remember that key_comp and value_comp both are same in use.
+
+    rules:
+    1.compare two values in ascending order:
+    compare(x1,x2) -> if(x1<x2), print 1 which is true. otherwise, print 0 which is false
+    2.compare two values in descending order:
+    compare(x1,x2) -> if(x1>x2), print 1 which is true. otherwise, print 0 which is false
+    and also never forget to use greater<int>
+*/
 int main()
 {
     // compare two values in ascending order
