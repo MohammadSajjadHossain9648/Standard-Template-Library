@@ -2,8 +2,18 @@
 #include<set>
 using namespace std;
 /*
+    to know more: https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+                  https://www.studytonight.com/cpp/stl/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.mygreatlearning.com/blog/multiset-in-cpp/
+                  https://www.javatpoint.com/cpp-multiset
+                  https://www.scaler.com/topics/cpp/multiset-in-cpp/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.studytonight.com/cpp/stl/stl-container-multiset
+*/
+/*
     Element access/Observers:
-    (Returns the object that determines how the elements in the multiset are ordered (‘<‘ by default).)
+    (Returns the object that determines how the elements in the multiset are ordered (â€˜<â€˜ by default).)
     1.key_comp() - Return a copy of key comparison object.
     2.value_comp() - Return a copy of value comparison object.
 
