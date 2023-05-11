@@ -2,10 +2,20 @@
 #include<set>
 using namespace std;
 /*
+    to know more: https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+                  https://www.studytonight.com/cpp/stl/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.mygreatlearning.com/blog/multiset-in-cpp/
+                  https://www.javatpoint.com/cpp-multiset
+                  https://www.scaler.com/topics/cpp/multiset-in-cpp/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.studytonight.com/cpp/stl/stl-container-multiset
+*/
+/*
     Modifiers:
     1.insert() - Insert element in the multiset.
-    2.insert(iterator position, const g) - Adds a new element ‘g’ at the position pointed by the iterator.
-    3.erase(const g) - Removes the value ‘g’ from the multiset.
+    2.insert(iterator position, const g) - Adds a new element â€˜gâ€™ at the position pointed by the iterator.
+    3.erase(const g) - Removes the value â€˜gâ€™ from the multiset.
     4.erase(iterator position) - Removes the element at the position pointed by the iterator.
     5.clear() - Removes all the elements from the multiset.
     6.emplace() - This function is used to insert a new element into the multiset container, only if the element
