@@ -2,6 +2,16 @@
 #include<set>
 using namespace std;
 /*
+    to know more: https://www.geeksforgeeks.org/the-c-standard-template-library-stl/
+                  https://www.studytonight.com/cpp/stl/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.mygreatlearning.com/blog/multiset-in-cpp/
+                  https://www.javatpoint.com/cpp-multiset
+                  https://www.scaler.com/topics/cpp/multiset-in-cpp/
+                  https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
+                  https://www.studytonight.com/cpp/stl/stl-container-multiset
+*/
+/*
     Allocator:
     1.get_allocator() - C++ multiset get_allocator() function is used to return the copy of allocator object which
     helps to construct the multiset container.
