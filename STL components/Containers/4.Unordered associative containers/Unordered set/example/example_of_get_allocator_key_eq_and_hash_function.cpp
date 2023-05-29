@@ -11,6 +11,18 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-unordered_set
 */
+/*
+    Allocator:
+    1.get_allocator() - C++ unordered_set get_allocator() function is used to return the copy of allocator object which
+    helps to construct the unordered_set container.
+    Time Complexity: O(1).
+    2.key_eq() - returns a boolean value according to the comparison. It returns the key equivalence comparison
+    predicate used by the unordered_set. The key equivalence comparison is a predicate that takes two arguments and
+    returns a bool value indicating whether they are equal.
+    3.hash_function() - hash_function() is a built-in function in C++ STL which is used to get hash function.
+    This hash function is a unary function which takes asingle argument only and returns a unique value of type
+    size_t based on it.
+*/
 int main()
 {
 //Example 1: The program below shows how allocator of a unordered_set can be used to allocate an array of 5 elements.
