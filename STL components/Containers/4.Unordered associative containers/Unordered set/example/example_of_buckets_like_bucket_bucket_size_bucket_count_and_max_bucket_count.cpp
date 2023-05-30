@@ -11,6 +11,13 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-unordered_set
 */
+/*
+    Buckets:
+    1.Buckets() - Returns the bucket number of a specific element.
+    2.Buckets_size() - Returns the total number of elements present in a specific bucket in an unordered_set container.
+    3.bucket_count() - Returns the total number of buckets present in an unordered_set container.
+    4.max_bucket_count() - Find the maximum number of buckets that unordered_set can have.
+*/
 int main()
 {
     unordered_set<int> v = {5,10,15,20,25};
