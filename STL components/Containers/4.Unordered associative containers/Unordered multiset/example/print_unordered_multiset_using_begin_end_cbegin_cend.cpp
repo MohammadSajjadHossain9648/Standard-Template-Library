@@ -11,6 +11,13 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-unordered_multiset
 */
+/*
+    1.begin() – Returns an iterator pointing to the first element in the unordered_multiset
+    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the unordered_multiset
+    3.cbegin() – Returns a constant iterator pointing to the first element in the unordered_multiset.
+    4.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    in the unordered_multiset.
+*/
 int main()
 {
     unordered_multiset <int> v = {10,20,50,40,30};
