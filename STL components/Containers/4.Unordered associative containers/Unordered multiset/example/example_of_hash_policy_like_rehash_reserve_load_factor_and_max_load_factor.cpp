@@ -11,6 +11,26 @@ using namespace std;
                   https://www.simplilearn.com/tutorials/cpp-tutorial/cpp-standard-template-library#:~:text=C%2B%2B%20STL%20(standard%20template%20library)%20is%20a%20software%20library%20for,%2C%20algorithms%2C%20and%20function%20objects.
                   https://www.studytonight.com/cpp/stl/stl-container-unordered_multiset
 */
+/*
+    Hash policy:
+    1.load_factor() - Returns the current load factor in the unordered_multiset container. The load factor is the ratio
+    between the number of elements in the container (its size) and the number of buckets (bucket_count):
+        load_factor = size / bucket_count
+
+    2.max_load_factor() - Returns(Or sets) the current maximum load factor of the unordered set container. The load
+    factor is the ratio between number of elements in the container and number of buckets(bucket_count). By default
+    the maximum load factor of an unordered set container is set to 1.0 .
+
+    3.rehash() - Set the number of buckets in the container of unordered_multiset to given size or more. rehash which is
+    used to set the number of buckets in the container of unordered_multiset to given size or more. If size is greater than
+    the current size of the container, then rehash is called. If it is lower than the current size, then the function
+    has no effect on bucket count of hash.
+
+    4.reserve() - Used to request capacity change of unordered_multiset. reserve which is used to request capacity change of
+    unordered_multiset. It sets the number of buckets in the container to contain at least n elements. If n is greater than
+    the current bucket_count multiplied by the max_load_factor, the container’s bucket_count is increased and a rehash
+    is forced. If n is lower than the bucket_count, then the function has no effect on it.
+*/
 int main()
 {
 //rehash & reserve
