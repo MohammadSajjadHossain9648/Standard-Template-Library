@@ -127,6 +127,8 @@ int main()
     cout<<endl;
 
 
+    
+
 // iterator
     // print unordered_multimap element using iteration
     unordered_multimap<int, string> s = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
@@ -139,6 +141,22 @@ int main()
     	cout<<it->first<<"\t"<<it->second<<endl;
     }
     cout<<endl;
+
+    /* same as above
+    unordered_multimap<int, string> s = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+
+    unordered_multimap<int, string>::iterator it = s.begin();  // Creating the iterator.
+
+    cout<<"\nmultimap<int, string> s\nid\tname\n";
+    while(it != s.end())
+    {
+    	cout<<it->first<<"\t"<<it->second<<endl;
+    	it++;
+    }
+    cout<<endl;
+    */
+
+    
 
     // print unordered_multimap element without using iteration
     unordered_multimap<int, string> s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
