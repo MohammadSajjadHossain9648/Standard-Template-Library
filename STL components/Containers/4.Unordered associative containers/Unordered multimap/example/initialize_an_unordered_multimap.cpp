@@ -70,14 +70,57 @@ int main()
 
     //or can be write same as use emplace instead of insert
     unordered_multimap<int, string> v4;
-    v4.insert(make_pair(2,"sakib")); //can use v4.insert(pair<int, string>({2,"sakib"}));
-    v4.insert(make_pair(1,"asif"));
-    v4.insert(make_pair(5,"liton"));
-    v4.insert(make_pair(3,"tamim"));
-    v4.insert(make_pair(4,"afif"));
+    v4.emplace(make_pair(2,"sakib")); //can use v4.emplace(pair<int, string>({2,"sakib"}));
+    v4.emplace(make_pair(1,"asif"));
+    v4.emplace(make_pair(5,"liton"));
+    v4.emplace(make_pair(3,"tamim"));
+    v4.emplace(make_pair(4,"afif"));
 
     cout<<"\nmultimap<int, string> v4\nid\tname\n";
     for(auto i: v4)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+    //or using pair
+    unordered_multimap<int, string> v5;
+    pair<int, string> p;    //can write d-> pair<int, string> p = make_pair(2,"sakib");
+    p = make_pair(2,"sakib");
+    v5.insert(p);
+    p = make_pair(1,"asif");
+    v5.insert(p);
+    p = make_pair(5,"liton");
+    v5.insert(p);
+    p = make_pair(3,"tamim");
+    v5.insert(p);
+    p = make_pair(4,"afif");
+    v5.insert(p);
+
+    cout<<"\nmultimap<int, string> v5\nid\tname\n";
+    for(auto i: v5)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+    //or using pair
+    unordered_multimap<int, string> v6;
+    pair<int, string> p1(2,"sakib");  //never write -> pair<int, string> p;   p(2, "sakib");
+    v6.insert(p1);
+    pair<int, string> p2(1,"asif");
+    v6.insert(p2);
+    pair<int, string> p3(5,"liton");
+    v6.insert(p3);
+    pair<int, string> p4(3,"tamim");
+    v6.insert(p4);
+    pair<int, string> p5(4,"afif");
+    v6.insert(p5);
+
+    cout<<"\nmultimap<int, string> v6\nid\tname\n";
+    for(auto i: v6)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
     }
@@ -151,6 +194,24 @@ int main()
     //
     //
     //    map<int, string> v4
+    //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
+    //    1       asif
+    //    2       sakib
+    //
+    //
+    //    map<int, string> v5
+    //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
+    //    1       asif
+    //    2       sakib
+    //
+    //
+    //    map<int, string> v6
     //    id      name
     //    4       afif
     //    3       tamim
