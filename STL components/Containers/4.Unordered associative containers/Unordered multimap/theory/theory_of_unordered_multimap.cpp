@@ -16,20 +16,20 @@ using namespace std;
 
 
     Iterators:
-    1.begin() – Returns an iterator pointing to the first element in the unordered_multimap
-    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the unordered_multimap
-    3.cbegin() – Returns a constant iterator pointing to the first element in the unordered_multimap.
-    4.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    1.begin() â€“ Returns an iterator pointing to the first element in the unordered_multimap
+    2.end() â€“ Returns an iterator pointing to the theoretical element that follows the last element in the unordered_multimap
+    3.cbegin() â€“ Returns a constant iterator pointing to the first element in the unordered_multimap.
+    4.cend() â€“ Returns a constant iterator pointing to the theoretical element that follows the last element
     in the unordered_multimap.
 
 
 
     Capacity:
-    1.size() – Returns the number of elements in the unordered_multimap.
-    2.max_size() – Returns the maximum number of elements that the unordered_multimap can hold.
-    3.empty() – Returns whether the unordered_multimap is empty.
-    4.find() - Returns an iterator to the element ‘g’ in the unordered_multimap if found, else returns the iterator to end.
-    5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the unordered_multimap or not.
+    1.size() â€“ Returns the number of elements in the unordered_multimap.
+    2.max_size() â€“ Returns the maximum number of elements that the unordered_multimap can hold.
+    3.empty() â€“ Returns whether the unordered_multimap is empty.
+    4.find() - Returns an iterator to the element â€˜gâ€™ in the unordered_multimap if found, else returns the iterator to end.
+    5.count() - Returns 1 or 0 based on whether the element â€˜gâ€™ is present in the unordered_multimap or not.
     6.equal_range(const g) - The function returns an iterator of pairs. (key_comp). The pair refers to the range
     that includes all the elements in the container which have a key equivalent to k. which indiactes results of both
     the lower_bound and the upper_bound of g.
@@ -37,8 +37,8 @@ using namespace std;
 
     Modifiers:
     1.insert() - Insert element in the unordered_multimap.
-    2.insert(iterator position, const g) - Adds a new element ‘g’ at the position pointed by the iterator.
-    3.erase(const g) - Removes the value ‘g’ from the unordered_multimap.
+    2.insert(iterator position, const g) - Adds a new element â€˜gâ€™ at the position pointed by the iterator.
+    3.erase(const g) - Removes the value â€˜gâ€™ from the unordered_multimap.
     4.erase(iterator position) - Removes the element at the position pointed by the iterator.
     5.clear() - Removes all the elements from the unordered_multimap.
     6.emplace() - This function is used to insert a new element into the unordered_multimap container, only if the element
@@ -76,7 +76,8 @@ int main()
 {
     /*
     The time complexities for doing various operations on multimaps are:
-        Insertion of Elements – O(log N)
-        Deletion of Elements – O(log N)
+        Insertion of Elements â€“ O(1)
+        Deletion of Elements â€“ O(1)
+        Searching of Elements â€“ O(1)
     */
 }
