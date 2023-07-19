@@ -20,38 +20,38 @@ using namespace std;
 
 
     Iterators:
-    1.begin() – Returns an iterator pointing to the first element in the map
-    2.end() – Returns an iterator pointing to the theoretical element that follows the last element in the map
-    3.rbegin() – Returns a reverse iterator pointing to the last element in the map (reverse beginning).
+    1.begin() â€“ Returns an iterator pointing to the first element in the map
+    2.end() â€“ Returns an iterator pointing to the theoretical element that follows the last element in the map
+    3.rbegin() â€“ Returns a reverse iterator pointing to the last element in the map (reverse beginning).
     It moves from last to first element
-    4.rend() – Returns a reverse iterator pointing to the theoretical element preceding the first element in
+    4.rend() â€“ Returns a reverse iterator pointing to the theoretical element preceding the first element in
     the map (considered as reverse end)
-    5.cbegin() – Returns a constant iterator pointing to the first element in the map.
-    6.cend() – Returns a constant iterator pointing to the theoretical element that follows the last element
+    5.cbegin() â€“ Returns a constant iterator pointing to the first element in the map.
+    6.cend() â€“ Returns a constant iterator pointing to the theoretical element that follows the last element
     in the map.
-    7.crbegin() – Returns a constant reverse iterator pointing to the last element in the map (reverse beginning).
+    7.crbegin() â€“ Returns a constant reverse iterator pointing to the last element in the map (reverse beginning).
     It moves from last to first element
-    8.crend() – Returns a constant reverse iterator pointing to the theoretical element preceding the first element
+    8.crend() â€“ Returns a constant reverse iterator pointing to the theoretical element preceding the first element
     in the map (considered as reverse end)
 
 
 
     Capacity:
-    1.size() – Returns the number of elements in the map.
-    2.max_size() – Returns the maximum number of elements that the map can hold.
-    3.empty() – Returns whether the map is empty.
-    4.find() - Returns an iterator to the element ‘g’ in the map if found, else returns the iterator to end.
-    5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the map or not.
-    6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to ‘g’ or definitely
-    will not go before the element ‘g’ in the map.
-    7.upper_bound(const g) - Returns an iterator to the first element that will go after the element ‘g’ in the map.
+    1.size() â€“ Returns the number of elements in the map.
+    2.max_size() â€“ Returns the maximum number of elements that the map can hold.
+    3.empty() â€“ Returns whether the map is empty.
+    4.find() - Returns an iterator to the element â€˜gâ€™ in the map if found, else returns the iterator to end.
+    5.count() - Returns 1 or 0 based on whether the element â€˜gâ€™ is present in the map or not.
+    6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to â€˜gâ€™ or definitely
+    will not go before the element â€˜gâ€™ in the map.
+    7.upper_bound(const g) - Returns an iterator to the first element that will go after the element â€˜gâ€™ in the map.
     8.equal_range(const g) - The function returns an iterator of pairs. (key_comp). The pair refers to the range
     that includes all the elements in the container which have a key equivalent to k. which indiactes results of both
     the lower_bound and the upper_bound of g.
 
 
     Element access/Observers:
-    (Returns the object that determines how the elements in the map are ordered (‘<‘ by default).)
+    (Returns the object that determines how the elements in the map are ordered (â€˜<â€˜ by default).)
     1.key_comp() - Return a copy of key comparison object.
     2.value_comp() - Return a copy of value comparison object.
 
@@ -59,11 +59,11 @@ using namespace std;
 
     Modifiers:
     1.insert() - Insert element in the map.
-    2.insert(iterator position, const g) - Adds a new element ‘g’ at the position pointed by the iterator.
+    2.insert(iterator position, const g) - Adds a new element â€˜gâ€™ at the position pointed by the iterator.
     3.insert_or_assign() - it works exactly as insert() except that if the given key is already present in the
     map then its value is modified.
     4. at() - return the reference to the element associated with the key k.
-    5.erase(const g) - Removes the value ‘g’ from the map.
+    5.erase(const g) - Removes the value â€˜gâ€™ from the map.
     6.erase(iterator position) - Removes the element at the position pointed by the iterator.
     7.clear() - Removes all the elements from the map.
     8.emplace() - This function is used to insert a new element into the map container, only if the element
@@ -104,7 +104,8 @@ int main()
 {
     /*
     The time complexities for doing various operations on maps are:
-        Insertion of Elements – O(log N)
-        Deletion of Elements – O(log N)
+        Insertion of Elements â€“ O(log N)
+        Deletion of Elements â€“ O(log N)
+        Searching of Elements â€“ O(log N)
     */
 }
