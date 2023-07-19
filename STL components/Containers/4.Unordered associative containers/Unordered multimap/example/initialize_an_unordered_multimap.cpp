@@ -42,7 +42,8 @@ int main()
 
 
 // initialize in unordered_multimap
-    unordered_multimap <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
+    // Initializer List 
+    unordered_multimap <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}}; // can write Uniform Initialization -> unordered_multimap <int, string> v1 {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
     cout<<"\nunordered_multimap<int, string> v1\nid\tname\n";
     for(auto i: v1)
