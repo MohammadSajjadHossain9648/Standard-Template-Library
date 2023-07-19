@@ -182,6 +182,17 @@ int main()
     }
     cout<<endl;
 
+    /* can write also
+        map<int, string>  s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+
+        cout<<"map<int, string>  s1 \nid\tname\n";
+        for (auto it = s1.begin(); it != s1.end(); it++)
+        {
+            cout<<it->first<<"\t"<<it->second<<endl;
+        }
+        cout<<endl;
+    */
+
 
 
     //output:
