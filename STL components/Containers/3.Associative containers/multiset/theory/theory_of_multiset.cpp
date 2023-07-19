@@ -114,5 +114,6 @@ int main()
     The time complexities for doing various operations on multisets are:
         Insertion of Elements – O(log N)
         Deletion of Elements – O(log N)
+        Searching of Elements – O(log N)
     */
 }
