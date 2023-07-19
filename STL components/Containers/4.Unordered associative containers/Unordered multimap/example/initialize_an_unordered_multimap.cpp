@@ -39,6 +39,8 @@ int main()
     cout<<endl;
 
 
+
+
 // initialize in unordered_multimap
     unordered_multimap <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
@@ -51,7 +53,7 @@ int main()
 
 
 
-    //issue -> remember that
+    //issue -> remember that can not intialize map by using operator like[]
     /*never use this way
     unordered_multimap <int, string> v1;
     v1[1] = "asif";
@@ -62,7 +64,6 @@ int main()
     v1["asif"] = 1;
     v1["sakib"] = 2;
     */
-
 
 
     //or
@@ -178,6 +179,37 @@ int main()
     }
     cout<<endl;
 
+    /* can write also
+        map<int, string>  s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+
+        cout<<"map<int, string>  s1 \nid\tname\n";
+        for (auto it = s1.begin(); it != s1.end(); it++)
+        {
+            cout<<it->first<<"\t"<<it->second<<endl;
+        }
+        cout<<endl;
+    */
+
+
+
+//copy one map to another
+    unordered_multimap <int, string> m = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+    unordered_multimap <int, string> m1 (m); //copy m1 in m
+
+    cout<<"\nunordered_multimap<int, string> m\nid\tname\n";
+    for(auto i: m)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+    cout<<"\nafter copy m into m1\nunordered_multimap<int, string> m1\nid\tname\n";
+    for(auto i: m1)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
 
 
     //output:
@@ -259,6 +291,25 @@ int main()
     //
     //
     //    unordered_multimap<int, string> s1
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    unordered_multimap<int, string> m
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    after copy m into m1
+    //    unordered_multimap<int, string> m1
     //    id      name
     //    1       asif
     //    2       sakib
