@@ -39,6 +39,8 @@ int main()
     cout<<endl;
 
 
+
+
 // initialize in unordered_map
     unordered_map <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
@@ -51,32 +53,20 @@ int main()
 
 
 
-    //issue -> remember that
-    /*never use this way
-    unordered_map <int, string> v1;
-    v1[1] = "asif";
-    v1[2] = "sakib";
+    //can intialize map by using operator like[]
+    unordered_map <int, string> v2;
+    v2[1] = "asif";
+    v2[2] = "sakib";
+    v2[3] = "tamim";
+    v2[4] = "afif";
+    v2[5] = "liton";
 
-    but can use
-    unordered_map <string, int> v1;
-    v1["asif"] = 1;
-    v1["sakib"] = 2;
-    */
-
-    unordered_map <string, int> v2;
-    v2["asif"] = 1;
-    v2["sakib"] = 2;
-    v2["tamim"] = 3;
-    v2["afif"] = 4;
-    v2["liton"] = 5;
-
-    cout<<"\nunordered_map<string, int> v2\nname\tid\n";
+    cout<<"\nunordered_map<string, int> v2\nid\tname\n";
     for(auto i: v2)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
     }
     cout<<endl;
-
 
 
     //or
@@ -227,13 +217,13 @@ int main()
     //    1       asif
     //
     //
-    //    unordered_map<string, int> v2
-    //    name    id
-    //    liton   5
-    //    afif    4
-    //    tamim   3
-    //    sakib   2
-    //    asif    1
+    //    unordered_map<int, string> v2
+    //    id      name
+    //    5       liton
+    //    4       afif
+    //    3       tamim
+    //    2       sakib
+    //    1       asif
     //
     //
     //    unordered_map<int, string> v3
