@@ -2,19 +2,19 @@
 #include<unordered_map>
 using namespace std;
 /*
-    always remember: whatever you input in unordered_multimap, it always take unique values.
+    always remember: whatever you input in unordered_map, it always take unique values.
 */
 int main()
 {
 
-//for taking user input in unordered_multimap
-    unordered_multimap<int, string> v;
+//for taking user input in unordered_map
+    unordered_map<int, string> v;
     int id, len;
     string name;
-    cout<<"enter the length of unordered_multimap: ";
+    cout<<"enter the length of unordered_map: ";
     cin>>len;
 
-    cout<<"unordered_multimap<int, string> v : \n";
+    cout<<"unordered_map<int, string> v : \n";
     for(int i=0; i<len; i++)
     {
         cout<<"id: ";
@@ -31,7 +31,7 @@ int main()
     }
     cout<<endl;
 
-    cout<<"\nmultimap<int, string> v\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v\nid\tname\n";
     for(auto i: v)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -39,10 +39,38 @@ int main()
     cout<<endl;
 
 
-// initialize in unordered_multimap
-    unordered_multimap <int, string> v1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+// initialize in unordered_map
+    unordered_map <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
-    cout<<"\nmultimap<int, string> v1\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v1\nid\tname\n";
+    for(auto i: v1)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+
+    //issue -> remember that
+    /*never use this way
+    unordered_map <int, string> v1;
+    v1[1] = "asif";
+    v1[2] = "sakib";
+
+    but can use
+    unordered_map <string, int> v1;
+    v1["asif"] = 1;
+    v1["sakib"] = 2;
+    */
+
+    unordered_map <string, int> v2;
+    v2["asif"] = 1;
+    v2["sakib"] = 2;
+    v2["tamim"] = 3;
+    v2["afif"] = 4;
+    v2["liton"] = 5;
+
+    cout<<"\nunordered_map<string, int> v2\nid\tname\n";
     for(auto i: v1)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -52,15 +80,15 @@ int main()
 
 
     //or
-    unordered_multimap<int, string> v3;
-    v3.insert(make_pair(2,"sakib")); //can use v3.insert(pair<int, string>({2,"sakib"}));
-    v3.insert(make_pair(1,"asif"));
-    v3.insert(make_pair(5,"liton"));
+    unordered_map<int, string> v3;
+    v3.insert(make_pair(1,"asif")); //same as -> v3.insert(pair<int, string>({1,"asif"}));
+    v3.insert(make_pair(2,"sakib"));
     v3.insert(make_pair(3,"tamim"));
     v3.insert(make_pair(4,"afif"));
+    v3.insert(make_pair(5,"liton"));
 
 
-    cout<<"\nmultimap<int, string> v3\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v3\nid\tname\n";
     for(auto i: v3)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -69,14 +97,14 @@ int main()
 
 
     //or can be write same as use emplace instead of insert
-    unordered_multimap<int, string> v4;
-    v4.emplace(make_pair(2,"sakib")); //can use v4.emplace(pair<int, string>({2,"sakib"}));
-    v4.emplace(make_pair(1,"asif"));
-    v4.emplace(make_pair(5,"liton"));
+    unordered_map<int, string> v4;
+    v4.emplace(make_pair(1,"asif")); //same as -> v4.emplace(pair<int, string>({1,"asif"}));
+    v4.emplace(make_pair(2,"sakib"));
     v4.emplace(make_pair(3,"tamim"));
     v4.emplace(make_pair(4,"afif"));
+    v4.emplace(make_pair(5,"liton"));
 
-    cout<<"\nmultimap<int, string> v4\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v4\nid\tname\n";
     for(auto i: v4)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -84,21 +112,21 @@ int main()
     cout<<endl;
 
 
-    //or using pair
-    unordered_multimap<int, string> v5;
-    pair<int, string> p;    //can write d-> pair<int, string> p = make_pair(2,"sakib");
+    //or using pair by using one pair variable
+    unordered_map<int, string> v5;
+    pair<int, string> p;
+    p = make_pair(1,"asif"); // never write -> p(1, "asif");
+    v5.insert(p);
     p = make_pair(2,"sakib");
-    v5.insert(p);
-    p = make_pair(1,"asif");
-    v5.insert(p);
-    p = make_pair(5,"liton");
     v5.insert(p);
     p = make_pair(3,"tamim");
     v5.insert(p);
     p = make_pair(4,"afif");
     v5.insert(p);
+    p = make_pair(5,"liton");
+    v5.insert(p);
 
-    cout<<"\nmultimap<int, string> v5\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v5\nid\tname\n";
     for(auto i: v5)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -106,20 +134,20 @@ int main()
     cout<<endl;
 
 
-    //or using pair
-    unordered_multimap<int, string> v6;
-    pair<int, string> p1(2,"sakib");  //never write -> pair<int, string> p;   p(2, "sakib");
+    //or using pair by using many pair variables
+    unordered_map<int, string> v6;
+    pair<int, string> p1 = make_pair(1,"asif");  //same as -> pair<int, string> p1(1,"asif");
     v6.insert(p1);
-    pair<int, string> p2(1,"asif");
+    pair<int, string> p2 = make_pair(2,"sakib");
     v6.insert(p2);
-    pair<int, string> p3(5,"liton");
+    pair<int, string> p3 = make_pair(3,"tamim");
     v6.insert(p3);
-    pair<int, string> p4(3,"tamim");
+    pair<int, string> p4 = make_pair(4,"afif");
     v6.insert(p4);
-    pair<int, string> p5(4,"afif");
+    pair<int, string> p5 = make_pair(5,"liton");
     v6.insert(p5);
 
-    cout<<"\nmultimap<int, string> v6\nid\tname\n";
+    cout<<"\nunordered_map<int, string> v6\nid\tname\n";
     for(auto i: v6)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
@@ -127,15 +155,13 @@ int main()
     cout<<endl;
 
 
-    
-
 // iterator
-    // print unordered_multimap element using iteration
-    unordered_multimap<int, string> s = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    // print unordered_map element using iteration
+    unordered_map<int, string> s = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
-    unordered_multimap<int, string>::iterator it;  // Creating the iterator.
+    unordered_map<int, string>::iterator it;  // Creating the iterator.
 
-    cout<<"\nmultimap<int, string> s\nid\tname\n";
+    cout<<"\nunordered_map<int, string> s\nid\tname\n";
     for (it = s.begin(); it != s.end(); it++)
     {
     	cout<<it->first<<"\t"<<it->second<<endl;
@@ -143,11 +169,11 @@ int main()
     cout<<endl;
 
     /* same as above
-    unordered_multimap<int, string> s = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    unordered_map<int, string> s = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
 
-    unordered_multimap<int, string>::iterator it = s.begin();  // Creating the iterator.
+    unordered_map<int, string>::iterator it = s.begin();  // Creating the iterator.
 
-    cout<<"\nmultimap<int, string> s\nid\tname\n";
+    cout<<"\nunordered_map<int, string> s\nid\tname\n";
     while(it != s.end())
     {
     	cout<<it->first<<"\t"<<it->second<<endl;
@@ -156,12 +182,10 @@ int main()
     cout<<endl;
     */
 
-    
+    // print unordered_map element without using iteration
+    unordered_map<int, string> s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
 
-    // print unordered_multimap element without using iteration
-    unordered_multimap<int, string> s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
-
-    cout<<"\nmultimap<int, string> s1\nid\tname\n";
+    cout<<"\nunordered_map<int, string> s1\nid\tname\n";
     for (auto i: s1)
     {
     	cout<<i.first<<"\t"<<i.second<<endl;
@@ -171,8 +195,8 @@ int main()
 
 
     //output:
-    //    enter the length of unordered_multimap: 5
-    //    unordered_multimap<int, string> v :
+    //    enter the length of unordered_map: 5
+    //    unordered_map<int, string> v :
     //    id: 4
     //    name: afif
     //    id: 3
@@ -193,65 +217,75 @@ int main()
     //    3       tamim
     //    4       afif
     //
-    //    map<int, string> v1
+    //
+    //    unordered_map<int, string> v1
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> v3
+    //    unordered_map<string, int> v2
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> v4
+    //    unordered_map<int, string> v3
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> v5
+    //    unordered_map<int, string> v4
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> v6
+    //    unordered_map<int, string> v5
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> s
+    //    unordered_map<int, string> v6
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
-    //    1       asif
     //    2       sakib
+    //    1       asif
     //
     //
-    //    map<int, string> s1
+    //    unordered_map<int, string> s
     //    id      name
+    //    5       liton
     //    4       afif
     //    3       tamim
-    //    5       liton
+    //    2       sakib
+    //    1       asif
+    //
+    //
+    //    unordered_map<int, string> s1
+    //    id      name
     //    1       asif
     //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
 }
