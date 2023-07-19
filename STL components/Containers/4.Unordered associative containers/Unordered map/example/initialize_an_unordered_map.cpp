@@ -183,15 +183,35 @@ int main()
     cout<<endl;
 
     /* can write also
-        unordered_map<int, string>  s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+        map<int, string>  s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
 
-        cout<<"unordered_map<int, string>  s1 \nid\tname\n";
+        cout<<"map<int, string>  s1 \nid\tname\n";
         for (auto it = s1.begin(); it != s1.end(); it++)
         {
             cout<<it->first<<"\t"<<it->second<<endl;
         }
         cout<<endl;
     */
+
+
+
+//copy one map to another
+    unordered_map <int, string> m = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+    unordered_map <int, string> m1 (m); //copy m1 in m
+
+    cout<<"\nunordered_map<int, string> m\nid\tname\n";
+    for(auto i: m)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+    cout<<"\nafter copy m into m1\nunordered_map<int, string> m1\nid\tname\n";
+    for(auto i: m1)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
 
 
 
@@ -283,6 +303,25 @@ int main()
     //
     //
     //    unordered_map<int, string> s1
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    unordered_map<int, string> m
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    after copy m into m1
+    //    unordered_map<int, string> m1
     //    id      name
     //    1       asif
     //    2       sakib
