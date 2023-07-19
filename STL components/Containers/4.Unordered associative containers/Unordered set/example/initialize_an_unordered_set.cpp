@@ -30,7 +30,8 @@ int main()
 
 
 // initialize in unordered_set
-    unordered_set <int> v1 = {10,20,50,40,30};
+    // Initializer List 
+    unordered_set <int> v1 = {10,20,50,40,30}; // can write Uniform Initialization -> unordered_set <int> v1 {10,20,50,40,30};
     cout<<"unordered_set<int> v1 = ";
     for(auto i: v1)
     {
