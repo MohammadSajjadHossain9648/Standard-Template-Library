@@ -70,8 +70,8 @@ int main()
     v2["afif"] = 4;
     v2["liton"] = 5;
 
-    cout<<"\nunordered_map<string, int> v2\nid\tname\n";
-    for(auto i: v1)
+    cout<<"\nunordered_map<string, int> v2\nname\tid\n";
+    for(auto i: v2)
     {
         cout<<i.first<<"\t"<<i.second<<endl;
     }
@@ -228,12 +228,12 @@ int main()
     //
     //
     //    unordered_map<string, int> v2
-    //    id      name
-    //    5       liton
-    //    4       afif
-    //    3       tamim
-    //    2       sakib
-    //    1       asif
+    //    name    id
+    //    liton   5
+    //    afif    4
+    //    tamim   3
+    //    sakib   2
+    //    asif    1
     //
     //
     //    unordered_map<int, string> v3
