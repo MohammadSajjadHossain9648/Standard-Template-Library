@@ -199,15 +199,15 @@ int main()
 
 
     //output:
-    //    enter the length of multimultiset: 5
-    //    multimultiset<int> v :
+    //    enter the length of multiset: 5
+    //    multiset<int> v :
     //    10
     //    20
     //    30
     //    40
     //    30
     //
-    //    multimultiset<int> v = 10 20 30 30 40
+    //    multiset<int> v = 10 20 30 30 40
     //
     //
     //    multiset<int> v1: 10 20 30 40 50
