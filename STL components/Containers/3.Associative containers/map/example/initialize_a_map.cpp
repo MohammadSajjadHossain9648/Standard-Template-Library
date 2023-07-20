@@ -44,8 +44,14 @@ int main()
 
 
 // initialize in map
-    map <int, string> v1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    // Initializer List 
+    map <int, string> v1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};  
+    
+    /* same as Uniform Initialization  
+    map <int, string> v1 {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};  
+    */
 
+    
     cout<<"\nmap<int, string> v1\nid\tname\n";
     for(auto i: v1)
     {
