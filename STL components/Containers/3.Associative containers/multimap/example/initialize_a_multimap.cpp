@@ -44,8 +44,14 @@ int main()
 
 
 // initialize in multimap
+    // Initializer List 
     multimap <int, string> v1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    
+    /* same as Uniform Initialization  
+    multimap <int, string> v1 {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    */
 
+    
     cout<<"\nmultimap<int, string> v1\nid\tname\n";
     for(auto i: v1)
     {
