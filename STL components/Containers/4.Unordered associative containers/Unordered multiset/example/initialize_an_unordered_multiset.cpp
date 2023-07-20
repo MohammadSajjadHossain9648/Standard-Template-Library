@@ -165,13 +165,6 @@ int main()
 
     unordered_multiset<int> s21 = {10,30,40,20,50}; //ascending order
     unordered_multiset<int, greater<int>> s22 = {10,30,40,20,50}; //descending order
-
-    cout<<"\nunordered_multiset<int> s22: ";
-    for(auto i: s22)
-    {
-    	cout<<i<<" ";
-    }
-    cout<<endl;
     */
 
 
