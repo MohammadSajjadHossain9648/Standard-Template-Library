@@ -29,7 +29,14 @@ int main()
 
 
 // initialize in multiset
+    // Initializer List 
     multiset <int> v1 = {10,20,50,40,30};
+    
+    /* same as Uniform Initialization  
+    multiset <int> v1 {10,20,50,40,30};
+    */
+
+    
     cout<<"multiset<int> v1 = ";
     for(auto i: v1)
     {
