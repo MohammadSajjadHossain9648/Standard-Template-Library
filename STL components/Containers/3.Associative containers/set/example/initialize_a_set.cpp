@@ -2,7 +2,7 @@
 #include<set>
 using namespace std;
 /*
-    always remember: whatever you input in set, it always stay in ascending order and always unique means store no duplicate values.
+    always remember: whatever you input in set, it always stay in ascending order and it always take unique values means store no duplicate values.
 */
 int main()
 {
