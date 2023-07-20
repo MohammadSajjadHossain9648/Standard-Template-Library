@@ -2,7 +2,7 @@
 #include<set>
 using namespace std;
 /*
-    always remember: whatever you input in multiset, it always stay in ascending order and store duplicate values.
+    always remember: whatever you input in multiset, it always stay in ascending order and it always stay in ascending order and store duplicate values.
 */
 int main()
 {
