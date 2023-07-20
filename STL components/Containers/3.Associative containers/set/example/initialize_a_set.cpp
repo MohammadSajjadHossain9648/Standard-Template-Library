@@ -30,7 +30,14 @@ int main()
 
 
 // initialize in set
-    set <int> v1 = {10,20,50,40,30};
+    // Initializer List 
+    set <int> v1 = {10,20,50,40,30};   
+    
+    /* same as Uniform Initialization  
+    set <int> v1 {10,20,50,40,30};   
+    */
+
+    
     cout<<"set<int> v1 = ";
     for(auto i: v1)
     {
