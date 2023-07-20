@@ -13,7 +13,7 @@ int main()
     cout<<"enter the length of unordered_set: ";
     cin>>len;
 
-    cout<<"unordered_set<int> v : \n";
+    cout<<"\nunordered_set<int> v : \n";
     for(int i=0; i<len; i++)
     {
         cin>>x;
@@ -21,7 +21,7 @@ int main()
     }
     cout<<endl;
 
-    cout<<"unordered_set<int> v = ";
+    cout<<"\nunordered_set<int> v: ";
     for(auto i: v)
     {
         cout<<i<<" ";
@@ -29,21 +29,27 @@ int main()
     cout<<endl;
 
 
+
+
+
 // initialize in unordered_set
-    // Initializer List 
-    unordered_set <int> v1 = {10,20,50,40,30}; 
+    // Initializer List
+    unordered_set <int> v1 = {10,20,50,40,30};
 
     /* same as Uniform Initialization
     unordered_set <int> v1 {10,20,50,40,30};
     */
 
-    
-    cout<<"unordered_set<int> v1 = ";
+
+    cout<<"\nunordered_set<int> v1: ";
     for(auto i: v1)
     {
         cout<<i<<" ";
     }
     cout<<endl;
+
+
+
 
     //same as before v1
     unordered_set<int> v2;
@@ -53,12 +59,15 @@ int main()
     }
     cout<<endl;
 
-    cout<<"unordered_set<int> v2 = ";
+    cout<<"\nunordered_set<int> v2: ";
     for(auto i: v2)
     {
         cout<<i<<" ";
     }
     cout<<endl;
+
+
+
 
     //or
     unordered_set<int> v3;
@@ -68,12 +77,14 @@ int main()
     v3.insert(7);
     v3.insert(6);
 
-    cout<<"\nunordered_set<int> v3 = ";
+    cout<<"\nunordered_set<int> v3: ";
     for(auto i: v3)
     {
         cout<<i<<" ";
     }
     cout<<endl;
+
+
 
 
     //or can be write same as use emplace instead of insert
@@ -84,12 +95,15 @@ int main()
     v4.emplace(6);
     v4.emplace(10);
 
-    cout<<"\nunordered_set<int> v4 = ";
+    cout<<"\nunordered_set<int> v4: ";
     for(auto i: v4)
     {
         cout<<i<<" ";
     }
     cout<<endl;
+
+
+
 
 
 // iterator
@@ -98,23 +112,87 @@ int main()
 
     unordered_set<int>::iterator it;  // Creating the iterator.
 
-    cout<<"unordered_set<int> s = ";
-    for (it = s.begin(); it != s.end(); it++)
+    cout<<"\nunordered_set<int> s: ";
+    for(it = s.begin(); it != s.end(); it++)
     {
     	cout<<*it<<" ";
     }
     cout<<endl;
 
+
+    /* same as above
+    unordered_set<int> s = {12,43,234,65,34,54,3};
+
+    unordered_set<int>::iterator it = s.begin();  // Creating the iterator.
+
+    cout<<"\nunordered_set<int> s: ";
+    while(it != s.end())
+    {
+    	cout<<*it<<" ";
+    	it++;
+    }
+    cout<<endl;
+    */
+
+
+
     // print unordered_set element without using iteration
     unordered_set<int> s1 = {12,43,234,65,34,54,3};
 
-    cout<<"unordered_set<int> s1 = ";
-    for (auto i: s1)
+    cout<<"\nunordered_set<int> s1: ";
+    for(auto i: s1)
     {
     	cout<<i<<" ";
     }
     cout<<endl;
 
+    /* can write also
+    unordered_set<int> s1 = {12,43,234,65,34,54,3};
+
+    cout<<"\nunordered_set<int> s1: ";
+    for(auto it = s1.begin(); it != s1.end(); it++)
+    {
+        cout<<it<<" ";
+    }
+    cout<<endl;
+    */
+
+
+
+
+//issue
+    /* note: unordered_set can not initialize in ascending order && descending order
+
+    unordered_set<int> s21 = {10,30,40,20,50}; //ascending order
+    unordered_set<int, greater<int>> s22 = {10,30,40,20,50}; //descending order
+
+    cout<<"\nunordered_set<int> s22: ";
+    for(auto i: s22)
+    {
+    	cout<<i<<" ";
+    }
+    cout<<endl;
+    */
+
+
+
+//copy one unordered_set to another
+    unordered_set <int> m = {10,20,50,40,30};
+    unordered_set <int> m1(m);
+
+    cout<<"\n\nunordered_set<int> m: ";
+    for(auto i: m)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    cout<<"\nafter copy m into m1\nunordered_set<int> m1: ";
+    for(auto i: m1)
+    {
+        cout<<i<<" ";
+    }
+    cout<<endl;
 
 
     //output:
@@ -127,13 +205,24 @@ int main()
     //    40
     //
     //    unordered_set<int> v = 40 30 20 10
-    //    unordered_set<int> v1 = 30 40 50 20 10
     //
-    //    unordered_set<int> v2 = 3 4 5 2 1
     //
-    //    unordered_set<int> v3 = 6 7 8 9 10
+    //    unordered_set<int> v1: 30 40 50 20 10
     //
-    //    unordered_set<int> v4 = 10 6 9 7 8
-    //    unordered_set<int> s = 3 54 34 65 234 43 12
-    //    unordered_set<int> s1 = 3 54 34 65 234 43 12
+    //
+    //    unordered_set<int> v2: 3 4 5 2 1
+    //
+    //    unordered_set<int> v3: 6 7 8 9 10
+    //
+    //    unordered_set<int> v4: 10 6 9 7 8
+    //
+    //    unordered_set<int> s: 3 54 34 65 234 43 12
+    //
+    //    unordered_set<int> s1: 3 54 34 65 234 43 12
+    //
+    //
+    //    unordered_set<int> m: 30 40 50 20 10
+    //
+    //    after copy m into m1
+    //    unordered_set<int> m1: 30 40 50 20 10
 }
