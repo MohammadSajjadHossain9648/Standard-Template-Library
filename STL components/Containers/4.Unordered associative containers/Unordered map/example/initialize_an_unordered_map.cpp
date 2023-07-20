@@ -42,8 +42,14 @@ int main()
 
 
 // initialize in unordered_map
+    // Initializer List 
     unordered_map <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
+    
+    /* same as Uniform Initialization  
+    unordered_map <int, string> v1 {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
+    */
 
+    
     cout<<"\nunordered_map<int, string> v1\nid\tname\n";
     for(auto i: v1)
     {
