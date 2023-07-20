@@ -29,6 +29,9 @@ int main()
     cout<<endl;
 
 
+
+
+
 // initialize in set
     // Initializer List
     set <int> v1 = {10,20,50,40,30};
@@ -44,6 +47,7 @@ int main()
         cout<<i<<" ";
     }
     cout<<endl;
+
 
 
 
@@ -63,6 +67,7 @@ int main()
     cout<<endl;
 
 
+
     //or
     set<int> v3;
     v3.insert(10);
@@ -79,6 +84,7 @@ int main()
     cout<<endl;
 
 
+
     //or can be write same as use emplace instead of insert
     set<int> v4;
     v4.emplace(8);
@@ -93,6 +99,7 @@ int main()
         cout<<i<<" ";
     }
     cout<<endl;
+
 
 
 
@@ -150,6 +157,7 @@ int main()
 
 
 
+
 //set can initialize in ascending order && descending order
     set<int> s21 = {10,30,40,20,50}; //ascending order
     cout<<"\n\nset<int> s21: ";
@@ -188,6 +196,7 @@ int main()
         cout<<i<<" ";
     }
     cout<<endl;
+
 
     //output:
     //    enter the length of set: 5
