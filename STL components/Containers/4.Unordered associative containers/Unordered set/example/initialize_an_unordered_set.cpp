@@ -2,7 +2,7 @@
 #include<unordered_set>
 using namespace std;
 /*
-    always remember: whatever you input in unordered_set, it always take unique values.
+    always remember: whatever you input in unordered_set, it always take unique values means store no duplicate values.
 */
 int main()
 {
