@@ -30,7 +30,14 @@ int main()
 
 
 // initialize in unordered_multiset
+    // Initializer List 
     unordered_multiset <int> v1 = {10,20,50,40,30};
+    
+    /* same as Uniform Initialization  
+    unordered_multiset <int> v1 {10,20,50,40,30};
+    */
+
+    
     cout<<"unordered_multiset<int> v1 = ";
     for(auto i: v1)
     {
