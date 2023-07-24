@@ -279,8 +279,8 @@ int main()
     //    name: afif
     //    id: 3
     //    name: tamim
-    //    id: 5
-    //    name: liton
+    //    id: 2
+    //    name: sakib
     //    id: 1
     //    name: asif
     //    id: 2
@@ -291,12 +291,21 @@ int main()
     //    id      name
     //    1       asif
     //    2       sakib
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //
+    //
+    //    multimap<int, string> v1
+    //    id      name
+    //    1       asif
+    //    2       sakib
     //    3       tamim
     //    4       afif
     //    5       liton
     //
     //
-    //    multimap<int, string> v1
+    //    multimap<int, string> v2
     //    id      name
     //    1       asif
     //    2       sakib
@@ -341,6 +350,24 @@ int main()
     //    5       liton
     //
     //
+    //    multimap<int, string> s21
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    multimap <int, string, greater<int>> s22
+    //    id      name
+    //    5       liton
+    //    4       afif
+    //    3       tamim
+    //    2       sakib
+    //    1       asif
+    //
+    //
     //    multimap<int, string> s
     //    id      name
     //    1       asif
@@ -357,6 +384,7 @@ int main()
     //    3       tamim
     //    4       afif
     //    5       liton
+    //
     //
     //    multimap<int, string> m
     //    id      name
