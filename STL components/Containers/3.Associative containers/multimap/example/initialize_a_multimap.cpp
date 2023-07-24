@@ -5,6 +5,8 @@ using namespace std;
     **Always remember: multimaps are the associative containers that store sorted key-value pair, in which each key
     is unique and it can be inserted or deleted but cannot be altered. Values associated with keys can be changed.
     it store values in ascending order.
+
+    always remember: whatever you input in multimap, it always stay in ascending order and it always stay in ascending order and store duplicate values.
 */
 int main()
 {
@@ -44,14 +46,14 @@ int main()
 
 
 // initialize in multimap
-    // Initializer List 
+    // Initializer List
     multimap <int, string> v1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
-    
-    /* same as Uniform Initialization  
+
+    /* same as Uniform Initialization
     multimap <int, string> v1 {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
     */
 
-    
+
     cout<<"\nmultimap<int, string> v1\nid\tname\n";
     for(auto i: v1)
     {
@@ -61,7 +63,7 @@ int main()
 
 
 
-    //issue -> remember that can not intialize map by using operator like[]
+    //issue -> remember that can not intialize multimap by using operator like[]
     /*never use this way
     multimap <int, string> v1;
     v1[1] = "asif";
@@ -72,6 +74,25 @@ int main()
     v1["asif"] = 1;
     v1["sakib"] = 2;
     */
+
+
+
+    //or
+    multimap<int, string> v2;
+    v2.insert({2,"sakib"});
+    v2.insert({1,"asif"});
+    v2.insert({5,"liton"});
+    v2.insert({3,"tamim"});
+    v2.insert({4,"afif"});
+
+
+    cout<<"\nmultimap<int, string> v2\nid\tname\n";
+    for(auto i: v2)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
 
 
     //or
@@ -91,6 +112,7 @@ int main()
     cout<<endl;
 
 
+
     //or can be write same as use emplace instead of insert
     multimap<int, string> v4;
     v4.emplace(make_pair(2,"sakib")); //same as -> v4.emplace(pair<int, string>({2,"sakib"}));
@@ -105,6 +127,7 @@ int main()
         cout<<i.first<<"\t"<<i.second<<endl;
     }
     cout<<endl;
+
 
 
     //or using pair by using one pair variable
@@ -129,6 +152,8 @@ int main()
     cout<<endl;
 
 
+
+
     //or using pair by using many pair variables
     multimap<int, string> v6;
     pair<int, string> p1 = make_pair(2,"sakib");  //same as -> pair<int, string> p1(2,"sakib");
@@ -148,6 +173,31 @@ int main()
         cout<<i.first<<"\t"<<i.second<<endl;
     }
     cout<<endl;
+
+
+
+
+//multimap can initialize in ascending order && descending order
+    multimap <int, string> s21 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}}; //ascending order
+
+    cout<<"\nmultimap<int, string> s21\nid\tname\n";
+    for(auto i: s21)
+    {
+    	cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+    multimap <int, string, greater<int>> s22 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}}; //descending order
+
+    cout<<"\nmultimap <int, string, greater<int>> s22\nid\tname\n";
+    for(auto i: s22)
+    {
+    	cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
 
 
 // iterator
@@ -180,7 +230,7 @@ int main()
 
 
     // print multimap element without using iteration
-    multimap<int, string> s1 = {{2,"sakib"},{1,"asif"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
+    multimap<int, string> s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
 
     cout<<"\nmultimap<int, string> s1\nid\tname\n";
     for (auto i: s1)
