@@ -282,8 +282,8 @@ int main()
     //    name: afif
     //    id: 3
     //    name: tamim
-    //    id: 5
-    //    name: liton
+    //    id: 2
+    //    name: sakib
     //    id: 1
     //    name: asif
     //    id: 2
@@ -296,7 +296,6 @@ int main()
     //    2       sakib
     //    3       tamim
     //    4       afif
-    //    5       liton
     //
     //
     //    map<int, string> v1
@@ -317,7 +316,7 @@ int main()
     //    5       liton
     //
     //
-    //    map<int, string> v3
+    //    map<string, int> v3
     //    id      name
     //    1       asif
     //    2       sakib
@@ -353,6 +352,33 @@ int main()
     //    5       liton
     //
     //
+    //    map<int, string> v7
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    map<int, string> s21
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    map <int, string, greater<int>> s22
+    //    id      name
+    //    5       liton
+    //    4       afif
+    //    3       tamim
+    //    2       sakib
+    //    1       asif
+    //
+    //
     //    map<int, string> s
     //    id      name
     //    1       asif
@@ -369,6 +395,7 @@ int main()
     //    3       tamim
     //    4       afif
     //    5       liton
+    //
     //
     //    map<int, string> m
     //    id      name
