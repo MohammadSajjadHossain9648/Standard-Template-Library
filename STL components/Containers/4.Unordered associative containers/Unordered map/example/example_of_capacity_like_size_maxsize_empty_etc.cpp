@@ -45,20 +45,6 @@ int main()
         cout<<"\nunordered_map is not empty\n";
     else
         cout<<"\nunordered_map is empty\n";
-
-
-//4.find or at
-    //example 1: find the value 3 is present or not
-    auto pos = v.find(3); //if found the value, pos store the value. else pos = v.end() which is null means nothing found.
-
-    if(pos != v.end())
-    {
-        cout<<"\nfound and the searching value is "<<pos->first<<" and name is "<<pos->second<<endl;
-    }
-    else
-    {
-        cout<<"\nsearching value didnot found in the unordered_map.\n";
-    }
     
     
 
@@ -76,7 +62,7 @@ int main()
     }
 
 
-    //example 1: find the value 3 is present or not using at
+    //find the value 3 is present or not using at
     cout<<"\nthe searching value is "<<3<<" and name is "<<v.at(3)<<endl;
 
     //can write directly using [] and v.at(3) is same as v[3]
