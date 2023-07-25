@@ -58,7 +58,11 @@ int main()
     else
     {
         cout<<"\nsearching value didnot found in the unordered_map.\n";
-    }//4.find or at (searching purpose)
+    }
+    
+    
+
+//4.find or at (searching purpose)
     //example 1: find the value 3 is present or not using find
     auto pos = v.find(3); //if found the value, pos store the value. else pos = v.end() which is null means nothing found.
 
@@ -174,6 +178,10 @@ int main()
     //    unordered_map is not empty
     //
     //    found and the searching value is 3 and name is tamim
+    //
+    //    the searching value is 3 and name is tamim
+    //
+    //    the searching value is 3 and name is tamim
     //
     //    after delete 5 from unordered_map
     //
