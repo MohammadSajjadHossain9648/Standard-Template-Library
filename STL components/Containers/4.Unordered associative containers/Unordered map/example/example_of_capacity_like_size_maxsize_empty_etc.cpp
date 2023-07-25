@@ -17,7 +17,7 @@ using namespace std;
     1.size() – Returns the number of elements in the unordered_map.
     2.max_size() – Returns the maximum number of elements that the unordered_map can hold.
     3.empty() – Returns whether the unordered_map is empty.
-    4.find() - Returns an iterator to the element ‘g’ in the unordered_map if found, else returns the iterator to end.
+    4.find()/at() - Returns an iterator to the element ‘g’ in the unordered_map if found, else returns the iterator to end.
     5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the unordered_map or not.
     6.equal_range(const g) - The function returns an iterator of pairs. (key_comp). The pair refers to the range
     that includes all the elements in the container which have a key equivalent to k. which indiactes results of both
@@ -47,7 +47,7 @@ int main()
         cout<<"\nunordered_map is empty\n";
 
 
-//4.find
+//4.find or at
     //example 1: find the value 3 is present or not
     auto pos = v.find(3); //if found the value, pos store the value. else pos = v.end() which is null means nothing found.
 
@@ -58,7 +58,25 @@ int main()
     else
     {
         cout<<"\nsearching value didnot found in the unordered_map.\n";
+    }//4.find or at (searching purpose)
+    //example 1: find the value 3 is present or not using find
+    auto pos = v.find(3); //if found the value, pos store the value. else pos = v.end() which is null means nothing found.
+
+    if(pos != v.end())
+    {
+        cout<<"\nfound and the searching value is "<<pos->first<<" and name is "<<pos->second<<endl;
     }
+    else
+    {
+        cout<<"\nsearching value didnot found in the unordered_map.\n";
+    }
+
+
+    //example 1: find the value 3 is present or not using at
+    cout<<"\nthe searching value is "<<3<<" and name is "<<v.at(3)<<endl;
+
+    //can write directly using [] and v.at(3) is same as v[3]
+    cout<<"\nthe searching value is "<<3<<" and name is "<<v[3]<<endl;
 
 
 
