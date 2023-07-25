@@ -17,7 +17,7 @@ using namespace std;
     1.size() – Returns the number of elements in the map.
     2.max_size() – Returns the maximum number of elements that the map can hold.
     3.empty() – Returns whether the map is empty.
-    4.find() - Returns an iterator to the element ‘g’ in the map if found, else returns the iterator to end.
+    4.find()/at() - Returns an iterator to the element ‘g’ in the map if found, else returns the iterator to end.
     5.count() - Returns 1 or 0 based on whether the element ‘g’ is present in the map or not.
     6.lower_bound(const g) - Returns an iterator to the first element that is equivalent to ‘g’ or definitely
     will not go before the element ‘g’ in the map.
@@ -37,7 +37,7 @@ int main()
     }
     cout<<endl;
 
-    cout<<"Size : "<<v.size();
+    cout<<"\nSize : "<<v.size();
     cout<<"\nMax Size : "<<v.max_size();
 
 
@@ -49,16 +49,16 @@ int main()
         cout<<"\nmap is empty";
 
 
-//4.find
+//4.find or at (searching purpose)
     //example 1: find the id of 1 is present or not, find() only take unique value like id, never take name.
     cout<<"\nfind id 3: ";
     if(v.find(3) != v.end()) //can be write, if(v.find(3) == 1) or if(v.find(3) > 0)
     {
-        cout<<"searching id 3 found in the map.";
+        cout<<"\nsearching id 3 found in the map.";
     }
     else
     {
-        cout<<"searching id 3 didnot found in the map.";
+        cout<<"\nsearching id 3 didnot found in the map.";
     }
 
     //or print with the details of id
@@ -66,12 +66,19 @@ int main()
 
     if(pos != v.end())
     {
-        cout<<"\nid 1 found and the searching value id is "<<pos->first<<" and name is "<<pos->second;
+        cout<<"\nid 1 found and the searching value id is "<<pos->first<<" and name is "<<pos->second<<endl;
     }
     else
     {
         cout<<"\nsearching value didnot found in the map.";
     }
+
+
+    //example 1: find the value 1 is present or not using at
+    cout<<"\nthe searching value id is "<<1<<" and name is "<<v.at(1)<<endl;
+
+    //can write directly using [] and v.at(1) is same as v[1]
+    cout<<"\nthe searching value id is "<<1<<" and name is "<<v[1]<<endl;
 
 
 
@@ -110,11 +117,11 @@ int main()
     cout<<"\ncount id 3: ";
     if(v.count(3)) //can be write, if(v.count(3) == 1) or if(v.count(3) > 0)
     {
-        cout<<"searching id 3 found in the map.";
+        cout<<"\nsearching id 3 found in the map.";
     }
     else
     {
-        cout<<"searching id 3 didnot found in the map.";
+        cout<<"\nsearching id 3 didnot found in the map.";
     }
     cout<<endl;
 
@@ -207,11 +214,18 @@ int main()
     //    4       afif
     //    5       liton
     //
+    //
     //    Size : 5
     //    Max Size : 128102389400760775
     //    map is not empty
-    //    find id 3: searching id 3 found in the map.
+    //    find id 3:
+    //    searching id 3 found in the map.
     //    id 1 found and the searching value id is 1 and name is asif
+    //
+    //    the searching value id is 1 and name is asif
+    //
+    //    the searching value id is 1 and name is asif
+    //
     //
     //    after delete id 5 from map:
     //    map<int, string> v
@@ -230,7 +244,8 @@ int main()
     //    4       afif
     //
     //
-    //    count id 3: searching id 3 found in the map.
+    //    count id 3:
+    //    searching id 3 found in the map.
     //
     //    searching id 1 didnot found in the map.
     //    searching id 2 found by count
