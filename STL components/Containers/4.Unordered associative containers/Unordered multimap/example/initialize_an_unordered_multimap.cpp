@@ -262,8 +262,8 @@ int main()
     //    name: afif
     //    id: 3
     //    name: tamim
-    //    id: 5
-    //    name: liton
+    //    id: 2
+    //    name: sakib
     //    id: 1
     //    name: asif
     //    id: 2
@@ -272,91 +272,101 @@ int main()
     //
     //    unordered_multimap<int, string> v
     //    id      name
-    //    2       sakib
     //    1       asif
-    //    5       liton
+    //    2       sakib
+    //    2       sakib
     //    3       tamim
     //    4       afif
     //
     //
     //    unordered_multimap<int, string> v1
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    2       sakib
+    //
+    //
+    //    unordered_multimap<int, string> v2
+    //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
+    //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> v3
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> v4
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> v5
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> v6
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> s
     //    id      name
-    //    5       liton
     //    4       afif
     //    3       tamim
-    //    2       sakib
+    //    5       liton
     //    1       asif
+    //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_multimap<int, string> s1
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
     //
     //
     //    unordered_multimap<int, string> m
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
     //
     //
     //    after copy m into m1
     //    unordered_multimap<int, string> m1
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
 }
