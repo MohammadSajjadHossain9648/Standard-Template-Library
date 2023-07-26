@@ -263,8 +263,8 @@ int main()
     //    name: afif
     //    id: 3
     //    name: tamim
-    //    id: 5
-    //    name: liton
+    //    id: 2
+    //    name: sakib
     //    id: 1
     //    name: asif
     //    id: 2
@@ -273,9 +273,8 @@ int main()
     //
     //    unordered_map<int, string> v
     //    id      name
-    //    2       sakib
     //    1       asif
-    //    5       liton
+    //    2       sakib
     //    3       tamim
     //    4       afif
     //
@@ -289,7 +288,7 @@ int main()
     //    1       asif
     //
     //
-    //    unordered_map<int, string> v2
+    //    unordered_map<string, int> v2
     //    id      name
     //    5       liton
     //    4       afif
@@ -334,39 +333,48 @@ int main()
     //    1       asif
     //
     //
-    //    unordered_map<int, string> s
+    //    unordered_map<int, string> v7
     //    id      name
     //    5       liton
     //    4       afif
     //    3       tamim
     //    2       sakib
     //    1       asif
+    //
+    //
+    //    unordered_map<int, string> s
+    //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
+    //    1       asif
+    //    2       sakib
     //
     //
     //    unordered_map<int, string> s1
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
     //
     //
     //    unordered_map<int, string> m
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
     //
     //
     //    after copy m into m1
     //    unordered_map<int, string> m1
     //    id      name
+    //    4       afif
+    //    3       tamim
+    //    5       liton
     //    1       asif
     //    2       sakib
-    //    3       tamim
-    //    4       afif
-    //    5       liton
 }
