@@ -2,7 +2,7 @@
 #include<unordered_map>
 using namespace std;
 /*
-    always remember: whatever you input in unordered_map, it always take unique values.
+    always remember: whatever you input in unordered_map, it store duplicate values.
 */
 int main()
 {
@@ -42,14 +42,14 @@ int main()
 
 
 // initialize in unordered_map
-    // Initializer List 
+    // Initializer List
     unordered_map <int, string> v1 = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
-    
-    /* same as Uniform Initialization  
+
+    /* same as Uniform Initialization
     unordered_map <int, string> v1 {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
     */
 
-    
+
     cout<<"\nunordered_map<int, string> v1\nid\tname\n";
     for(auto i: v1)
     {
@@ -75,13 +75,15 @@ int main()
     cout<<endl;
 
 
+
+
     //or
     unordered_map<int, string> v3;
-    v3.insert(make_pair(1,"asif")); //same as -> v3.insert(pair<int, string>({1,"asif"}));
-    v3.insert(make_pair(2,"sakib"));
-    v3.insert(make_pair(3,"tamim"));
-    v3.insert(make_pair(4,"afif"));
-    v3.insert(make_pair(5,"liton"));
+    v3.insert({1,"asif"});
+    v3.insert({2,"sakib"});
+    v3.insert({3,"tamim"});
+    v3.insert({4,"afif"});
+    v3.insert({5,"liton"});
 
 
     cout<<"\nunordered_map<int, string> v3\nid\tname\n";
@@ -92,13 +94,16 @@ int main()
     cout<<endl;
 
 
-    //or can be write same as use emplace instead of insert
+
+
+    //or
     unordered_map<int, string> v4;
-    v4.emplace(make_pair(1,"asif")); //same as -> v4.emplace(pair<int, string>({1,"asif"}));
-    v4.emplace(make_pair(2,"sakib"));
-    v4.emplace(make_pair(3,"tamim"));
-    v4.emplace(make_pair(4,"afif"));
-    v4.emplace(make_pair(5,"liton"));
+    v4.insert(make_pair(1,"asif")); //same as -> v4.insert(pair<int, string>({1,"asif"}));
+    v4.insert(make_pair(2,"sakib"));
+    v4.insert(make_pair(3,"tamim"));
+    v4.insert(make_pair(4,"afif"));
+    v4.insert(make_pair(5,"liton"));
+
 
     cout<<"\nunordered_map<int, string> v4\nid\tname\n";
     for(auto i: v4)
@@ -108,19 +113,13 @@ int main()
     cout<<endl;
 
 
-    //or using pair by using one pair variable
+    //or can be write same as use emplace instead of insert
     unordered_map<int, string> v5;
-    pair<int, string> p;
-    p = make_pair(1,"asif"); // never write -> p(1, "asif");
-    v5.insert(p);
-    p = make_pair(2,"sakib");
-    v5.insert(p);
-    p = make_pair(3,"tamim");
-    v5.insert(p);
-    p = make_pair(4,"afif");
-    v5.insert(p);
-    p = make_pair(5,"liton");
-    v5.insert(p);
+    v5.emplace(make_pair(1,"asif")); //same as -> v5.emplace(pair<int, string>({1,"asif"}));
+    v5.emplace(make_pair(2,"sakib"));
+    v5.emplace(make_pair(3,"tamim"));
+    v5.emplace(make_pair(4,"afif"));
+    v5.emplace(make_pair(5,"liton"));
 
     cout<<"\nunordered_map<int, string> v5\nid\tname\n";
     for(auto i: v5)
@@ -130,18 +129,19 @@ int main()
     cout<<endl;
 
 
-    //or using pair by using many pair variables
+    //or using pair by using one pair variable
     unordered_map<int, string> v6;
-    pair<int, string> p1 = make_pair(1,"asif");  //same as -> pair<int, string> p1(1,"asif");
-    v6.insert(p1);
-    pair<int, string> p2 = make_pair(2,"sakib");
-    v6.insert(p2);
-    pair<int, string> p3 = make_pair(3,"tamim");
-    v6.insert(p3);
-    pair<int, string> p4 = make_pair(4,"afif");
-    v6.insert(p4);
-    pair<int, string> p5 = make_pair(5,"liton");
-    v6.insert(p5);
+    pair<int, string> p;
+    p = make_pair(1,"asif"); // never write -> p(1, "asif");
+    v6.insert(p);
+    p = make_pair(2,"sakib");
+    v6.insert(p);
+    p = make_pair(3,"tamim");
+    v6.insert(p);
+    p = make_pair(4,"afif");
+    v6.insert(p);
+    p = make_pair(5,"liton");
+    v6.insert(p);
 
     cout<<"\nunordered_map<int, string> v6\nid\tname\n";
     for(auto i: v6)
@@ -151,9 +151,42 @@ int main()
     cout<<endl;
 
 
+    //or using pair by using many pair variables
+    unordered_map<int, string> v7;
+    pair<int, string> p1 = make_pair(1,"asif");  //same as -> pair<int, string> p1(1,"asif");
+    v7.insert(p1);
+    pair<int, string> p2 = make_pair(2,"sakib");
+    v7.insert(p2);
+    pair<int, string> p3 = make_pair(3,"tamim");
+    v7.insert(p3);
+    pair<int, string> p4 = make_pair(4,"afif");
+    v7.insert(p4);
+    pair<int, string> p5 = make_pair(5,"liton");
+    v7.insert(p5);
+
+    cout<<"\nunordered_map<int, string> v7\nid\tname\n";
+    for(auto i: v7)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
+
+
+//issue
+    /* note: unordered_map can not initialize in ascending order && descending order
+
+    unordered_map<int, string> s21 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}}; //ascending order
+    unordered_map<int, string, greater<int>> s22 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}}; //descending order
+    */
+
+
+
+
 // iterator
     // print unordered_map element using iteration
-    unordered_map<int, string> s = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
+    unordered_map<int, string> s = {{2,"sakib"},{1,"asif"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
 
     unordered_map<int, string>::iterator it;  // Creating the iterator.
 
@@ -164,8 +197,9 @@ int main()
     }
     cout<<endl;
 
+
     /* same as above
-    unordered_map<int, string> s = {{1,"asif"},{2,"sakib"},{3,"tamim"},{4,"afif"},{5,"liton"}};
+    unordered_map<int, string> s = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
 
     unordered_map<int, string>::iterator it = s.begin();  // Creating the iterator.
 
@@ -178,8 +212,9 @@ int main()
     cout<<endl;
     */
 
+
     // print unordered_map element without using iteration
-    unordered_map<int, string> s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+    unordered_map<int, string> s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
 
     cout<<"\nunordered_map<int, string> s1\nid\tname\n";
     for (auto i: s1)
@@ -189,20 +224,20 @@ int main()
     cout<<endl;
 
     /* can write also
-        map<int, string>  s1 = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+    unordered_map<int, string>  s1 = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
 
-        cout<<"map<int, string>  s1 \nid\tname\n";
-        for (auto it = s1.begin(); it != s1.end(); it++)
-        {
-            cout<<it->first<<"\t"<<it->second<<endl;
-        }
-        cout<<endl;
+    cout<<"unordered_map<int, string>  s1 \nid\tname\n";
+    for (auto it = s1.begin(); it != s1.end(); it++)
+    {
+        cout<<it->first<<"\t"<<it->second<<endl;
+    }
+    cout<<endl;
     */
 
 
 
-//copy one map to another
-    unordered_map <int, string> m = {{5,"liton"},{4,"afif"},{3,"tamim"},{2,"sakib"},{1,"asif"}};
+//copy one unordered_map to another
+    unordered_map <int, string> m = {{2,"sakib"},{1,"asif"},{5,"liton"},{3,"tamim"},{4,"afif"}};
     unordered_map <int, string> m1 (m); //copy m1 in m
 
     cout<<"\nunordered_map<int, string> m\nid\tname\n";
