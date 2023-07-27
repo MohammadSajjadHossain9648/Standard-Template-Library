@@ -81,6 +81,18 @@ int main()
     cout<<"\nthe searching value id is "<<1<<" and name is "<<v[1]<<endl;
 
 
+    // change value for 4 using [] or at
+    v[4] = "yasir";  // same as -> v.at(4) = "yasir";
+
+
+    cout<<"\nAfter changing key 4 value:\nmap<int, string> v\nid\tname\n";
+    for(auto i: v)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
 
     //example 2: find the id 5 and delete it from map
     v.erase(v.find(5));
