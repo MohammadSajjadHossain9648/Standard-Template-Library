@@ -69,6 +69,18 @@ int main()
     cout<<"\nthe searching value is "<<3<<" and name is "<<v[3]<<endl;
 
 
+    // change value for 4 using [] or at
+    v[4] = "yasir";  // same as -> v.at(4) = "yasir";
+
+
+    cout<<"\nAfter changing key 4 value:\nmap<int, string> v\nid\tname\n";
+    for(auto i: v)
+    {
+        cout<<i.first<<"\t"<<i.second<<endl;
+    }
+    cout<<endl;
+
+
 
     //example 2: find the value 5 and delete it from unordered_map
     v.erase(v.find(5));
