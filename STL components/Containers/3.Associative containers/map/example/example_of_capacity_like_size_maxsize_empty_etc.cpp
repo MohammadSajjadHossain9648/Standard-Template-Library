@@ -238,6 +238,15 @@ int main()
     //
     //    the searching value id is 1 and name is asif
     //
+    //    After changing key 4 value:
+    //    map<int, string> v
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       yasir
+    //    5       liton
+    //
     //
     //    after delete id 5 from map:
     //    map<int, string> v
