@@ -47,5 +47,31 @@ int main()
 
 
     v[10]; // automatically create key 10 with null value
-    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value
+    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value 
+
+
+
+
+    //output:
+    //
+    //    unordered_map<int, string> v
+    //    id      name
+    //    5       liton
+    //    4       afif
+    //    3       tamim
+    //    2       sakib
+    //    1       asif
+    //
+    //
+    //    unordered_map<int, string> v
+    //    id      name
+    //    5       liton
+    //    4       mehedi
+    //    3       tamim
+    //    2       sakib
+    //    1       asif
+    //
+    //
+    //
+    //    value in key 10:
 }
