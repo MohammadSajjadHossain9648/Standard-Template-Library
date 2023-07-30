@@ -51,7 +51,7 @@ int main()
 
 
     v[10]; // automatically create key 10 with null value
-    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value value
+    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value
 
 
 
