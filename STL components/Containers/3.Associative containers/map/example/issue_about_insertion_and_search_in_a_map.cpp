@@ -51,5 +51,31 @@ int main()
 
 
     v[10]; // automatically create key 10 with null value
-    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value
+    cout<<"\n\nvalue in key 10: "<<v.at(10)<<endl;  // nothing show error cause automatically create key 10 with null value value
+
+
+
+
+    //output:
+    //
+    //    map<int, string> v
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       afif
+    //    5       liton
+    //
+    //
+    //    map<int, string> v
+    //    id      name
+    //    1       asif
+    //    2       sakib
+    //    3       tamim
+    //    4       mehedi
+    //    5       liton
+    //
+    //
+    //
+    //    value in key 10:
 }
